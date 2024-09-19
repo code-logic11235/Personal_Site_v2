@@ -82,6 +82,14 @@
     .nav_item{
         grid-column: span 2;
     }
+    .nav_item:nth-child(4) {
+        grid-column: 2 / 4; /* Starts at column 2 and ends just before column 4 (spans columns 2 and 3) */
+    }
+    
+    .nav_item:nth-child(5) {
+        grid-column: 4 / 6; /* Starts at column 4 and ends just before column 6 (spans columns 4 and 5) */
+    }
+
     .nav_close{
         position: absolute;
         right: 1.3rem;
