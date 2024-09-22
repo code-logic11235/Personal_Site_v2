@@ -1,5 +1,9 @@
 
-// Action Types
+//https://www.algoexpert.io/frontend/react-crash-course/state
+// STARTS AT BOTTOM
+
+
+// Action Types //////////   1
 export const FETCH_USERS_REQUEST = 'FETCH_USERS_REQUEST';
 export const FETCH_USERS_SUCCESS = 'FETCH_USERS_SUCCESS';
 export const FETCH_USERS_FAILURE = 'FETCH_USERS_FAILURE';
@@ -20,7 +24,7 @@ export const fetchUsersFailure = (error) => ({
 });
 src/redux/reducers.js
 
-
+//  REDUCER     /////////// 2
 import { FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE, FETCH_USERS_REQUEST } from './actions';
 
 const initialState = {
@@ -34,7 +38,7 @@ const userReducer = (state = initialState, action) => {
     case FETCH_USERS_REQUEST:
       return { ...state, loading: true, error: null };
     case FETCH_USERS_SUCCESS:
-      return { ...state, loading: false, users: action.payload };
+      return { ...state, loading: false, users: action.payload }; // update data from call in fetch users
     case FETCH_USERS_FAILURE:
       return { ...state, loading: false, error: action.payload };
     default:
@@ -44,26 +48,28 @@ const userReducer = (state = initialState, action) => {
 
 export default userReducer;
 src/redux/sagas.js
-
-
+///////////////////////////
+/// 
 import { call, put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 import { FETCH_USERS_REQUEST, fetchUsersSuccess, fetchUsersFailure } from './actions';
 
+// 3 runs this 
 function* fetchUsers() {
   try {
     const response = yield call(axios.get, 'https://jsonplaceholder.typicode.com/users');
-    yield put(fetchUsersSuccess(response.data));
+    yield put(fetchUsersSuccess(response.data)); // if successfull runs this action and give it data to update up there in reducer
   } catch (error) {
     yield put(fetchUsersFailure(error.message));
   }
 }
 
 export function* watchFetchUsers() {
-  yield takeEvery(FETCH_USERS_REQUEST, fetchUsers);
+  yield takeEvery(FETCH_USERS_REQUEST, fetchUsers);  // step 2 hit the action, then this line watches for that action and 
+  // run fetch user
 }
 src/redux/store.js
-
+////////////////////////////
 
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
@@ -76,10 +82,16 @@ const store = createStore(userReducer, applyMiddleware(sagaMiddleware));
 sagaMiddleware.run(watchFetchUsers);
 
 export default store;
+
+
+
+/////////////////////
 // Step 4: Create the User List Component
 src/components/UserList.js
 
 
+
+///// start of how to use reducer / saga
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsersRequest } from '../redux/actions';
@@ -89,7 +101,7 @@ const UserList = () => {
   const { users, loading, error } = useSelector((state) => state);
 
   useEffect(() => {
-    dispatch(fetchUsersRequest());
+    dispatch(fetchUsersRequest()); // dispatches here start step 1
   }, [dispatch]);
 
   if (loading) return <div>Loading...</div>;
