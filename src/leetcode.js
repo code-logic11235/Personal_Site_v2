@@ -135,11 +135,10 @@ Copy code
     reducers.js
     sagas.js
     store.js
-Step 3: Implement Redux Logic
+// Step 3: Implement Redux Logic
 src/redux/actions.js
 
-javascript
-Copy code
+
 // Action Types
 export const FETCH_USERS_REQUEST = 'FETCH_USERS_REQUEST';
 export const FETCH_USERS_SUCCESS = 'FETCH_USERS_SUCCESS';
@@ -161,8 +160,7 @@ export const fetchUsersFailure = (error) => ({
 });
 src/redux/reducers.js
 
-javascript
-Copy code
+
 import { FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE, FETCH_USERS_REQUEST } from './actions';
 
 const initialState = {
@@ -187,8 +185,7 @@ const userReducer = (state = initialState, action) => {
 export default userReducer;
 src/redux/sagas.js
 
-javascript
-Copy code
+
 import { call, put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 import { FETCH_USERS_REQUEST, fetchUsersSuccess, fetchUsersFailure } from './actions';
@@ -207,8 +204,7 @@ export function* watchFetchUsers() {
 }
 src/redux/store.js
 
-javascript
-Copy code
+
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import userReducer from './reducers';
@@ -220,11 +216,10 @@ const store = createStore(userReducer, applyMiddleware(sagaMiddleware));
 sagaMiddleware.run(watchFetchUsers);
 
 export default store;
-Step 4: Create the User List Component
+// Step 4: Create the User List Component
 src/components/UserList.js
 
-javascript
-Copy code
+
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsersRequest } from '../redux/actions';
@@ -250,11 +245,10 @@ const UserList = () => {
 };
 
 export default UserList;
-Step 5: Set Up the App Component
+// Step 5: Set Up the App Component
 src/App.js
 
-javascript
-Copy code
+
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from './redux/store';
