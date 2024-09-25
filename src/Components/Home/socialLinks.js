@@ -11,11 +11,11 @@ export default function SocialLink () {
         <i class="uil uil-instagram"></i>
       </a>
       <a
-        href="https://dribbble.com/"
+        href="https://linkedin.com/"
         className="home_social-icon"
         target="_blank"
       >
-        <i class="uil uil-dribbble"></i>
+        <i class="uil uil-linkedin"></i>
       </a>
       <a
         href="https://github.com/"

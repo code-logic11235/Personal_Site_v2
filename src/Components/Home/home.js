@@ -5,6 +5,28 @@ import "./home.css"
 
 
 export default function Home() {
+    document.addEventListener('mousemove', (event) => {
+        const homeImg = document.querySelector('.home_img');
+        const { clientX, clientY } = event;
+    
+        // Get the screen width and height
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+    
+        // Calculate percentage position of the mouse relative to the screen size
+        const xPercent = (clientX / screenWidth) * 100;
+        const yPercent = (clientY / screenHeight) * 100;
+    
+        // Calculate new dynamic border-radius values based on mouse movement
+        const topLeft = 50 + (xPercent / 5) + '%';
+        const topRight = 50 - (xPercent / 5) + '%';
+        const bottomLeft = 50 + (yPercent / 5) + '%';
+        const bottomRight = 50 - (yPercent / 5) + '%';
+    
+        // Apply the dynamic border-radius to the element
+        homeImg.style.borderRadius = `${topLeft} ${topRight} ${bottomRight} ${bottomLeft} / ${bottomLeft} ${bottomRight} ${topRight} ${topLeft}`;
+    });
+
 
     return (
         <section className="home section" id="home">
