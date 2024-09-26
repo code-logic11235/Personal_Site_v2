@@ -5,28 +5,7 @@ import "./home.css"
 
 
 export default function Home() {
-    document.addEventListener('mousemove', (event) => {
-        const homeImg = document.querySelector('.home_img');
-        const { clientX, clientY } = event;
     
-        // Get the screen width and height
-        const screenWidth = window.innerWidth;
-        const screenHeight = window.innerHeight;
-    
-        // Calculate percentage position of the mouse relative to the screen size
-        const xPercent = (clientX / screenWidth) * 100;
-        const yPercent = (clientY / screenHeight) * 100;
-    
-        // Calculate new dynamic border-radius values based on mouse movement
-        const topLeft = 50 + (xPercent / 5) + '%';
-        const topRight = 50 - (xPercent / 5) + '%';
-        const bottomLeft = 50 + (yPercent / 5) + '%';
-        const bottomRight = 50 - (yPercent / 5) + '%';
-    
-        // Apply the dynamic border-radius to the element
-        homeImg.style.borderRadius = `${topLeft} ${topRight} ${bottomRight} ${bottomLeft} / ${bottomLeft} ${bottomRight} ${topRight} ${topLeft}`;
-    });
-
 
     return (
         <section className="home section" id="home">
@@ -96,7 +75,8 @@ function Data(){
                 </svg> </h1>
             <h3 className="home_subtitle">Visual Designer</h3>
             <p className="hone_description"> im a creative designer based in Texas</p>
-            <a href='#contact' className="button button__flex"> say Hello <svg
+            <p className="button_contact" href="#contact"><span className="button_contact_span"></span>Button</p>
+            {/* <a href='#contact' className="button button__flex"> say Hello <svg
                   class="button__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -112,18 +92,9 @@ function Data(){
                     d="M10.11 14.7052C9.92005 14.7052 9.73005 14.6352 9.58005 14.4852C9.29005 14.1952 9.29005 13.7152 9.58005 13.4252L13.16 9.83518C13.45 9.54518 13.93 9.54518 14.22 9.83518C14.51 10.1252 14.51 10.6052 14.22 10.8952L10.64 14.4852C10.5 14.6352 10.3 14.7052 10.11 14.7052Z"
                     fill="var(--container-color)"
                   ></path>
-                </svg></a>
+                </svg></a> */}
 
         </div>
     )
 }
 
-// function Comment (props){
-//     return (
-//         <section>
-//             <p> {props.username} this is username </p>
-//             {props.children}
-//         </section>
-//     )
-// }
-// export default Home;
