@@ -52,7 +52,7 @@ const Banner = () => {
                     <Col xs={12} md={6} xl={7} id='intro-description'>
                         <span className='tagline'> Welcome to My Portfolio</span>
                         <h1>{`hi I'm Tai Pham`} <span className='wrap'> {text}</span></h1>
-                        <p> lorem ipsum Design and development for a video game tracking app built in React Native </p>
+                        <p> ipsum Design and development for a video game tracking app built in React Native </p>
                         {/* <button onClick={() => { console.log('connect') }}>Lets Connect <ArrowRightCircle size={25}></ArrowRightCircle></button> */}
                     </Col>
                    
