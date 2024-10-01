@@ -47,13 +47,12 @@ const Banner = () => {
 
     return (
         <section className="homepage-banner padding-md" id="banner">
-            <Container className='padding-md'>
+            <Container className='padding-md banner_container'>
                 <Row className="align-items-center justify-content-between">
                     <Col xs={12} md={6} xl={7} id='intro-description'>
                         <span className='tagline'> Welcome to my Website</span>
                         <h1>{`I'm Tai Pham, a`} <span className='wrap'> {text}</span></h1>
                         <p> Feel free to explore — whether you’re interested in looking at some of my latest projects, or simply browsing around. Dive in, don’t hesitate to reach out! Enjoy your visit!</p>
-                        {/* <button onClick={() => { console.log('connect') }}>Lets Connect <ArrowRightCircle size={25}></ArrowRightCircle></button> */}
                     </Col>
                    
                 </Row>

@@ -95,7 +95,7 @@
 }
 
 .home_scroll{
-  margin-left: 9.25rem;
+  /* margin-left: 9.25rem; */
 }
 .home_scroll-name{
   color: var(--title-color);
@@ -119,9 +119,11 @@
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .home_content{
-    grid-template-columns: 100px repeat(2, 1fr);
+    /* grid-template-columns: 100px 1fr .7fr; */
+    grid-template-columns: 100px 1fr .7fr;
+    grid-template-rows: .5fr 1.1fr;
     column-gap: 1.25rem;
   }
   .hello_button{
@@ -150,13 +152,48 @@
     height: 250px;
   }
   .home_scroll{
-    margin-left: 7.5rem;
+    /* margin-left: 7.5rem; */
   }
+}
+
+@media screen and (min-width: 767px) and (max-width: 870px){
+
+  .home_content{
+    grid-template-columns: 50px repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+  /*
+.home_data{
+  display: grid ;
+  row-gap: 30px ;
+
+}
+.hello_button{
+  width: 200px;
+  background-color: #0c0d0d;
+} */
+
+
 }
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
+
   .home_content{
+    grid-template-columns: 50px repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+  .home_data{
+    display: grid ;
+    row-gap: 30px ;
+  
+  }
+  .hello_button{
+    width: 200px;
+    background-color: #0c0d0d;
+  }
+  
+  /* .home_content{
     grid-template-columns: .5fr .3fr;
     padding-top: 3.5rem;
   }
@@ -176,10 +213,11 @@
   }
   .home_scroll{
     margin-left: 7.5rem;
-  }
+  } */
 }
 
 @media screen and (max-width: 576px) {
+
 }
 
 /* For small devices */
