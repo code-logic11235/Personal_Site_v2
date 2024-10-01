@@ -13,21 +13,21 @@
   margin-bottom: var(--mb-3);
 }
 .home_img {
-    background: url(../../assets/HeadshotPro.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
-    /* box-shadow: inset 2px 4px 7px 10px rgb(147, 147, 147); */
-    order: 1;
-    justify-self: center;
-    animation: profile_animate 8s ease-in-out infinite 1s;
-    transition: border-radius 0.1s ease-out;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  background: url(../../assets/HeadshotPro.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  order: 1;
+  justify-self: center;
+  animation: morph 8s ease-in-out infinite 1s;
+  transition: border-radius 0.1s ease-out;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
 }
 
-@keyframes profile_animate {
+
+@keyframes morph {
     0% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
@@ -38,6 +38,8 @@
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
 }
+
+
 
 .home_social{
     display: flex;
@@ -110,18 +112,25 @@
 
 @keyframes bounce {
   0%, 100% {
-    transform: translateY(3.5px); /* Start and end at original position */
+    transform: translateY(4.5px); /* Start and end at original position */
   }
   50% {
     transform: translateY(-6px); /* Move up by 20px */
   }
 }
 
-
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
   .home_content{
     grid-template-columns: 100px repeat(2, 1fr);
     column-gap: 1.25rem;
+  }
+  .hello_button{
+    width: 200px;
+    background-color: #0c0d0d;
+  }
+  .home_data{
+    display: grid ;
+    row-gap: 30px ;
   }
 
   .home_subtitle{

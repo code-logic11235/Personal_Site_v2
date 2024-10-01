@@ -31,7 +31,7 @@ function Data(){
             <h3 className="home_subtitle">Software Engineer</h3>
             <p className="hone_description"> I am a remote Software engineer who day dreams about building pixel-perfect and accessible web applications</p> */}
             {/* <p className="button_contact" href="#contact"><span className="button_contact_span"></span>Contact Me</p> */}
-            <a href='#contact' className="button button__flex"> say Hello <svg
+            <a href='#contact' className="button hello_button button__flex"> say Hello <svg
                   class="button__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

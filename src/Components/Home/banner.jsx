@@ -9,7 +9,7 @@ const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = [ "Web Developer. ", "Web Designer. ", "Dreamer. " ];
   const period = 2000;
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(500);
+      setDelta(200);
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
@@ -50,9 +50,9 @@ const Banner = () => {
             <Container className='padding-md'>
                 <Row className="align-items-center justify-content-between">
                     <Col xs={12} md={6} xl={7} id='intro-description'>
-                        <span className='tagline'> Welcome to My Portfolio</span>
-                        <h1>{`hi I'm Tai Pham`} <span className='wrap'> {text}</span></h1>
-                        <p> ipsum Design and development for a video game tracking app built in React Native </p>
+                        <span className='tagline'> Welcome to my Website</span>
+                        <h1>{`I'm Tai Pham, a`} <span className='wrap'> {text}</span></h1>
+                        <p> Feel free to explore — whether you’re interested in looking at some of my latest projects, or simply browsing around. Dive in, don’t hesitate to reach out! Enjoy your visit!</p>
                         {/* <button onClick={() => { console.log('connect') }}>Lets Connect <ArrowRightCircle size={25}></ArrowRightCircle></button> */}
                     </Col>
                    
