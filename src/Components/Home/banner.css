@@ -23,3 +23,7 @@
 .banner_container{
     margin: 0;
 }
+#intro-description h1{
+    white-space: nowrap;
+    overflow: hidden;
+}
