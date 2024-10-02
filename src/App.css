@@ -115,6 +115,7 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
+  height: 100vh;
   /* padding: 6rem 0 2rem; */
 }
 

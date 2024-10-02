@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css"
 import Header from './Components/Header/header';
-import Home from './Components/Home/home'
+import Home from './Components/Home/home';
+import About from './Components/About/about';
 function App() {
   
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <Header/>
       <Home/>    
+      <About/>
     </>
   )
 }
