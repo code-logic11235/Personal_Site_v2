@@ -6,7 +6,7 @@ import CV from "../../assets/Tai_pham_CV.pdf"
 export default function About() {
 
     return (
-        <section className="about section" id="about">
+        <section className="about section container" id="about">
             <div className="about_section_container">
                 <div className="about_title">
                     <h1 className="section_title">About Me</h1>
@@ -21,9 +21,9 @@ export default function About() {
                         </div>
                         <span className="description_sentence_2">I've enjoyed great opportunities over the past many years to hone the skills that serve me well in software engineering roles. More than anything, I have repeatedly found that building applications (like many things!) is a game of breaking down big challenges into small, manageable chunks, then solving each chunk with a few key tools. The challenges constantly change. The tools regularly get replaced with newer, shinier ones. But, the process of approaching tasks, splitting them, and completing them remains fairly constant.</span>
                     </div>
-                    <a download="" href={CV} className="button download_button"> Download my CV
+                    <a target="_blank" rel="noopener noreferrer" href={CV} className="button download_button"> View my CV
                             <svg
-                                class="button__icon"
+                                className="button__icon"
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
                                 height="24"

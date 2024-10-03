@@ -1,8 +1,29 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./header.css"
 
 function Header() {
     const [toggle, showMenu] = useState(false);
+
+    const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+          setActiveSection(section.getAttribute("id"));
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
 
 
@@ -16,13 +37,13 @@ function Header() {
           <ul className="nav_list grid">
 
             <li className="nav_item">
-              <a href="#home" className="nav_link active-link" onClick={()=> showMenu(!toggle)}>
+              <a href="#home" className={`nav_link ${activeSection === 'home' ? 'active-link' : ''}` }onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-house-user nav_icon"></i> Home
               </a>
             </li>
 
             <li className="nav_item">
-              <a href="#about" className="nav_link" onClick={()=> showMenu(!toggle)}>
+              <a href="#about" className={`nav_link ${activeSection === 'about' ? 'active-link' : ''}`} onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-user nav_icon"></i> About
               </a>
             </li>

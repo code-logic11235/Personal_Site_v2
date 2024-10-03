@@ -1,0 +1,114 @@
+@media screen and (min-width: 768px) {
+    .footer{
+        background-color: rgb(232, 232, 232);
+        display: flex;
+        justify-content: space-around;
+    
+        .footer_links{
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+        
+    }
+    
+}
+.footer .home_social{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.footer_text_icon_wrapper{
+    display: flex;
+    gap: 12px;
+   
+}
+.footer_text_icon_wrapper > p{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: black;
+}
+.footer_text_icon_wrapper > p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+.home_social-icon:hover {
+    transform: none;
+}
+.footer .footer_made_with_container{
+    display: flex;
+}
+.footer_made_with{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    
+}
+.footer_made_with div{
+    padding-top: 6px;
+    display: block;
+    width: fit-content;
+}
+.footer_made_with svg{
+   fill: rgb(186, 24, 24);
+    padding-top: 2px;
+    animation: growShrink 2.5s infinite ease-in-out; 
+    transform-origin: center;
+
+     
+}
+@keyframes growShrink {
+    0% {
+      transform: scale(1);   /* Original size */
+    }
+    50% {
+      transform: scale(.8); /* Grow to 1.5 times the original size */
+    }
+    100% {
+      transform: scale(1);   /* Return to original size */
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .footer{
+        background-color: rgb(232, 232, 232);
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+
+    .home_social{
+        flex-direction: column;
+        gap: 10px;
+    }
+        /* .footer_links{
+            height: 50px;
+            display: flex;
+            align-items: center;
+        } */
+        
+    }
+    .footer{
+        bottom: 0;
+    }
+    .footer_links{
+        height: 130px;
+        display: flex;
+        align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .footer_text_icon_wrapper > p{
+        font-size: 14px;
+       
+    }
+    .footer_made_with{
+        font-size: 14px;
+    }
+  }
