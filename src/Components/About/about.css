@@ -1,6 +1,5 @@
 .about{
-    display: grid;
-    align-items: center;
+    padding-top: 80px;
 }
 .description_container{
     display: flex;
@@ -34,18 +33,21 @@
     justify-content: center;
 }
 .about_img{
-    background: url(../../assets/about_headshot.png);
+    background: url(../../assets/headshot_1.png);
     /* background: url(../../assets/image.jpg); */
 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* width: 100%; */
+    /* width: 100%;
+    height: 100%; */
     flex-basis: 40%;
     height: 240px;
     order: 1;
     justify-self: center;
     border-radius: 40px;
+    object-fit: cover;
+    /* aspect-ratio: 2/3; */
 }
 .description_sentence_1{
     flex-basis: 100%;
@@ -98,7 +100,7 @@
                     /* width: 30vw; */
                     /* flex-basis: 40%; */
                     /* height: 30vh; */
-                    aspect-ratio: 4/3;
+                    aspect-ratio: 1;
                     justify-self: center;
                     border-radius: 40px;
                     grid-row: 1;

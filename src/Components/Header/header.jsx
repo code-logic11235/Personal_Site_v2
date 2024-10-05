@@ -12,7 +12,11 @@ function Header() {
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+        // console.log('section: ',section)
+        // console.log('sectionTop: ',sectionTop)
+        // console.log('sectionHeight: ',sectionHeight)
+
+        if (window.scrollY >= sectionTop - sectionHeight / 5) {
           setActiveSection(section.getAttribute("id"));
         }
       });
@@ -37,7 +41,7 @@ function Header() {
           <ul className="nav_list grid">
 
             <li className="nav_item">
-              <a href="#home" className={`nav_link ${activeSection === 'home' ? 'active-link' : ''}` }onClick={()=> showMenu(!toggle)}>
+              <a href="#home" className={`nav_link ${activeSection === 'home' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-house-user nav_icon"></i> Home
               </a>
             </li>
@@ -49,7 +53,7 @@ function Header() {
             </li>
 
             <li className="nav_item">
-              <a href="#skills" className="nav_link" onClick={()=> showMenu(!toggle)}>
+              <a href="#skills" className={`nav_link ${activeSection === 'skills' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-file-alt nav_icon"></i>Skills
               </a>
             </li>
