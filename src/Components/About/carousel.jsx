@@ -16,13 +16,12 @@ export default function Carousel (){
     
     return (
 
-        <div id="myCarousel" className="carousel slide" data-bs-ride="carousel" style={{ maxWidth: "75vw" }}>
+        <div id="myCarousel" className="carousel slide" data-bs-ride="carousel" >
             <div className="carousel-inner">
                 {URLS.map((url, keys)=>
 
                     <div className={`carousel-item ${keys === 0 ? 'active' : ''}`} key={keys}>
-                        {console.log(keys)}
-                        <img src={url} className="d-block w-100" alt="..." style={{ height: "60vh", objectFit: "cover" }}/>
+                        <img src={url} className="d-block w-100 carousel_img" alt="..." />
                     </div>
 
                 )}

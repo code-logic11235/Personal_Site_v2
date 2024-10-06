@@ -23,30 +23,18 @@ export default function About() {
                             <span className="description_sentence_1"> I am a software engineer in Austin, Texas with an abundance of frontend development experience with frameworks like React and Angular. I have been at Google since June 2022, mainly doing UI development with Angular in the type-safe Dart ecosystem. Outside of work, I love experimenting with the latest and greatest TypeScript or Dart packages and most recently have been absolutely delighted by the developer experience of NextJS and SvelteKit.</span>
                         </div>
                         <span className="description_sentence_2">I've enjoyed great opportunities over the past many years to hone the skills that serve me well in software engineering roles. More than anything, I have repeatedly found that building applications (like many things!) is a game of breaking down big challenges into small, manageable chunks, then solving each chunk with a few key tools. The challenges constantly change. The tools regularly get replaced with newer, shinier ones. But, the process of approaching tasks, splitting them, and completing them remains fairly constant.</span>
+                        <span className="description_sentence_3">Outside of tech, I've had some wild times like leading the worship band for Baptist Collegiate Ministry during my senior year, running lights for the Plain White T's, hosting a radio show, and working on audio productions anywhere from mixing in honky-tonk bars to recording the Greenville Symphony Orchestra. I've been to the US Grand Prix, which was a wonderful time. I love music, any kind of four-wheeled motorsports, rich coffees, and working on cars. One thing I find particularly relaxing is nature photography, where it's delightfully easy to forget about bits, bytes, and pixels; enjoy; and try to capture the beauty of a moment:</span>
                     </div>
                     
                 </div>
 
                 <div className="about_carousel_wrapper">
-                    <h3> Views from my Iphone</h3>
-                    <Carousel/>
+                    <h5> Views from my Iphone</h5>
+                    <div className="carousel_wrapper">
+                        <Carousel/>
+                    </div>
     
-                    {/* <div id="myCarousel" className="carousel slide" data-bs-ride="carousel" style={{ maxWidth: "800px" }}>
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                            <img src="https://i.ibb.co/QCtcfNJ/Full-Size-Render-preview.jpg" className="d-block w-100" alt="..." style={{ height: "450px", objectFit: "cover" }}/>
-                            </div>
-                            <div className="carousel-item">
-                            <img src="https://i.ibb.co/YRLvZFn/IMG-1244.jpg" className="d-block w-100" alt="..." style={{ height: "450px", objectFit: "cover" }}/>
-                            </div>
-                        </div>
-                        <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </button>
-                        <button className="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
-                    </div> */}
+                 
 
                 </div>
             </div>
@@ -55,35 +43,3 @@ export default function About() {
     )
 
 }
-{/* <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-<ol className="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-</ol>
-<div className="carousel-inner">
-    <div className="carousel-item active">
-    <img className="d-block w-100" src="https://i.ibb.co/BN6cJ7h/IMG-2-Original.jpg" alt="First slide"/>
-    </div>
-    <div className="carousel-item">
-    <img className="d-block w-100" src="https://i.ibb.co/QCtcfNJ/Full-Size-Render-preview.jpg" alt="Second slide"/>
-    </div>
-    <div className="carousel-item">
-    <img className="d-block w-100" src="https://i.ibb.co/YRLvZFn/IMG-1244.jpg" alt="Third slide"/>
-    </div>
-</div>
-<a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="sr-only">Previous</span>
-</a>
-<a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="sr-only">Next</span>
-</a>
-</div>
-</div>
-src="https://i.ibb.co/BN6cJ7h/IMG-2-Original.jpg"
-src="https://i.ibb.co/QCtcfNJ/Full-Size-Render-preview.jpg"
-src="https://i.ibb.co/YRLvZFn/IMG-1244.jpg"
-
- */}

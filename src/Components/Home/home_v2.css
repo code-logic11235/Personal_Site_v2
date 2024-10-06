@@ -1,0 +1,41 @@
+.home_social{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: fit-content;
+
+}
+.home_social-icon {
+    font-size: 1.8rem;
+    color: var(--title-color);
+    transition: transform 0.2s ease, color 0.1s ease; 
+}
+
+.home_social-icon:hover {
+    transform: scale(1.5);
+    color: var(--title-color-dark);
+}
+.home_content{
+    display: grid;
+    grid-template-columns: 2vw 47vw 47vw;
+    border: 1px solid black;
+    padding: 20px;
+}
+.home{
+    display: flex;
+    align-items: center;
+}
+.home_img {
+    background: url(../../assets/headshot_black_2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 330px;
+    height: 50vh;
+    
+    order: 1;
+    /* justify-self: center; */
+    /* animation: morph 8s ease-in-out infinite 1s;
+    transition: border-radius 0.1s ease-out;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; */
+  }
