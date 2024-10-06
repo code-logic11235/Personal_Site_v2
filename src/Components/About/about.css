@@ -19,7 +19,7 @@
     }
 }
 .about_container{
-    width: 70vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,6 +64,9 @@
 }
 
 @media screen and (max-width: 768px){
+    .about{
+        padding-top: 0;
+    }
     .about_section_container{
         padding-top: 3rem ;
         padding-bottom: 3rem;

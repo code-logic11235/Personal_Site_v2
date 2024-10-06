@@ -1,0 +1,50 @@
+/* .react-carousel-container{
+    min-width: 800px;
+}
+.react-carousel-img{
+    min-width: 800px;
+    min-height: 450px;
+}
+.carousel-item{
+    min-width: 800px;
+    min-height: 450px;
+} */
+
+/* .carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 50%;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background-size: 100%, 100%;
+} */
+/* 
+.carousel-control-prev,
+.carousel-control-next {
+    outline: none; 
+} */
+/* 
+.carousel-next-icon::before{
+    min-width: 25px;
+    height: 25px;
+} */
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgb(27, 27, 27); 
+    border-radius: 50%;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background-size: 100%, 100%;
+    opacity: 1;
+    background-size: 100%; /* Ensure the icon fills the button */
+
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1; /* Ensure the arrow button itself is fully visible */
+}

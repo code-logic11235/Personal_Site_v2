@@ -1,8 +1,10 @@
 
 import React, { useState } from "react";
-import "./about.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "./about.css"
+import Carousel from "./carousel";
+
 import img from '../../assets/about_headshot.png'
 export default function About() {
 
@@ -26,40 +28,62 @@ export default function About() {
                 </div>
 
                 <div className="about_carousel_wrapper">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img class="d-block w-100" src="..." alt="First slide"/>
+                    <h3> Views from my Iphone</h3>
+                    <Carousel/>
+    
+                    {/* <div id="myCarousel" className="carousel slide" data-bs-ride="carousel" style={{ maxWidth: "800px" }}>
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
+                            <img src="https://i.ibb.co/QCtcfNJ/Full-Size-Render-preview.jpg" className="d-block w-100" alt="..." style={{ height: "450px", objectFit: "cover" }}/>
+                            </div>
+                            <div className="carousel-item">
+                            <img src="https://i.ibb.co/YRLvZFn/IMG-1244.jpg" className="d-block w-100" alt="..." style={{ height: "450px", objectFit: "cover" }}/>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                        <img class="d-block w-100" src="..." alt="Second slide"/>
-                        </div>
-                        <div class="carousel-item">
-                        <img class="d-block w-100" src="..." alt="Third slide"/>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                    </div>
-                </div>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button className="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div> */}
 
+                </div>
             </div>
            
         </section>
     )
 
 }
+{/* <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+<ol className="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+</ol>
+<div className="carousel-inner">
+    <div className="carousel-item active">
+    <img className="d-block w-100" src="https://i.ibb.co/BN6cJ7h/IMG-2-Original.jpg" alt="First slide"/>
+    </div>
+    <div className="carousel-item">
+    <img className="d-block w-100" src="https://i.ibb.co/QCtcfNJ/Full-Size-Render-preview.jpg" alt="Second slide"/>
+    </div>
+    <div className="carousel-item">
+    <img className="d-block w-100" src="https://i.ibb.co/YRLvZFn/IMG-1244.jpg" alt="Third slide"/>
+    </div>
+</div>
+<a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="sr-only">Previous</span>
+</a>
+<a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="sr-only">Next</span>
+</a>
+</div>
+</div>
+src="https://i.ibb.co/BN6cJ7h/IMG-2-Original.jpg"
+src="https://i.ibb.co/QCtcfNJ/Full-Size-Render-preview.jpg"
+src="https://i.ibb.co/YRLvZFn/IMG-1244.jpg"
 
-
-
+ */}
