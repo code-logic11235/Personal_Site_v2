@@ -10,16 +10,16 @@ const Skills = () => {
   // }
   let frontEndSkills= {
     title: "Frontend Development",
-    skills: ["Javascrip", "HTML", "CSS", "React.js", "Bootstrap", "Webpack", "stuff", "Bootstrap", "Webpack", "stuff"]
+    skills: ["React.js", "Stencil.js", "HTML", "CSS", "Javascript", "Bootstrap", "Webpack", "TypeScript", "Redux"]
   }
   let backEndSkills= {
     title: "BackEnd development",
     skills: ["MySQL", "Node.js", "MongoBD", "CI/CD pipeline", "GraphQL"]
   }
   return (
-   <section className='skills section' id="skills">
+   <section className='skills section container' id="skills">
         <h2 className='skills_title'> Skills</h2>
-        <h5> My technical level</h5>
+        <h6 className='title_description' style = {{color: "gray"}}> My technical level</h6>
 
         <div className='skills_container'>
           <SkillsCard skillsObj={frontEndSkills}/>

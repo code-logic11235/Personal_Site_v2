@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Container, Row, Col} from "react-bootstrap"
+
 // import {ArrowRightCircle} from "react-bootstrap-icons"
 import './banner.css'
 
@@ -50,8 +50,8 @@ const Banner = () => {
             <div className='padding-md banner_container'>
                 <div className="align-items-center justify-content-between">
                     <div  id='intro-description'>
-                        <span className='tagline'> Welcome to my Website</span>
-                        <h3>{`I'm Tai Pham, a`} <span className='wrap'> {text}</span></h3>
+                        <h2 className='tagline'> Welcome to my Website</h2>
+                        <h5 className='tagline_folow'>{`I'm Tai Pham, a`} <span className='wrap'> {text}</span></h5>
                         <p> Feel free to explore — whether you’re interested in looking at some of my latest projects, or simply browsing around. Dive in, don’t hesitate to reach out! Enjoy your visit!</p>
                     </div>
                    

@@ -1,6 +1,14 @@
 .about{
     padding-top: 80px;
 }
+.description_sentence_3{
+    font-size: 18px;
+    font-weight: 500;
+}
+.description_sentence_1{
+    font-size: 18px;
+    font-weight: 500;
+}
 .description_container{
     display: flex;
     justify-content: center;
@@ -28,7 +36,7 @@
     
 }
 .about_img_description_1_wrapper{
-    display: flex;
+    /* display: flex; */
     flex-direction: row-reverse;
     gap: 40px;
     justify-content: center;
@@ -51,12 +59,16 @@
     /* aspect-ratio: 2/3; */
 }
 .description_sentence_1{
+    font-family: var(--about-me-font );
     flex-basis: 100%;
     flex-basis: 70%;
+    letter-spacing: .3px;
  }
  
-.description_sentence_2{
-   flex-basis: 100%;
+.description_sentence_3{
+    font-family: var(--about-me-font );
+    letter-spacing: .3px;
+    flex-basis: 100%;
 }
 
 .download_button{
@@ -68,6 +80,17 @@
     padding-bottom: 15px;
 }
 @media screen and (max-width: 768px){
+    
+    .description_sentence_3{
+        font-size: 16px;
+        letter-spacing: 0px;
+
+    }
+    .description_sentence_1{
+        font-size: 16px;
+        letter-spacing: 0px;
+
+    }
     .about{
         padding-top: 0;
     }

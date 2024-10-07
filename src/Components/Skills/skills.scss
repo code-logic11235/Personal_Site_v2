@@ -12,8 +12,9 @@
     border-radius: 15px;
     min-height: 35vh;
     display: grid;
-    grid-template-rows: 20% 1fr;
+    grid-template-rows: .2fr .8fr;
     padding: 6px 12px 12px 12px;
+    background-color: #d4d0d0;
 
     
     .skills_card_title{
@@ -22,6 +23,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0;
+        padding: 8px;
 
     }
     .skills_text{
@@ -29,6 +32,7 @@
         display: flex;
         /* justify-content: center; */
         align-items: center;
+        font-family: var(--about-me-font);
         
     }
     .qualification_icon::before{
@@ -47,7 +51,7 @@
     text-align: center;
     font-size: 2.5rem;
 }
-h5{
+.title_description{
     text-align: center;
 
 }
@@ -58,8 +62,25 @@ h5{
     justify-content: center;
 }
 
+@media screen and (min-width: 768px) and (max-width: 900px) {
+    .skills_text{
+        margin-left: 5% !important;
+    }
+
+}
+
 @media screen and (max-width: 768px) {
     .skills{
         padding-top: 3rem;
     }
+    .skills_container{
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills_card_container {
+        width: 70%;
+    }
+
 }

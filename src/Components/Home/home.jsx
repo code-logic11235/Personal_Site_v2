@@ -9,7 +9,7 @@ export default function Home() {
 
     return (
         <section className="home section" id="home">
-            <div className="home_container container ">
+            <div className="home_container ">
             {/* <svg version="1.0" xmlns="http://www.w3.org/2000/svg" style={{transform: "rotate(180deg)"}}
             width="526.000000pt" height="176.000000pt" viewBox="0 0 526.000000 176.000000"
             preserveAspectRatio="xMidYMid meet">

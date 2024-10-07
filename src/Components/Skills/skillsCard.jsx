@@ -9,7 +9,7 @@ const SkillsCard = ({skillsObj}) => {
             {skillsObj.skills.map((skill, key)=>{
                 return (
                     <div className='skills_text flex' key = {key}>
-                        <i className ="uil uil-briefcase-alt qualification_icon" >{skill}.</i>      
+                        <i className ="uil uil-favorite qualification_icon" >{skill}.</i>      
                     </div>
                 )
             })}

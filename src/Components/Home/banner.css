@@ -1,6 +1,4 @@
-#banner{
-    /* font-family: "IBM Plex Mono", monospace; */
-}
+
 #banner-headshot {
     width: 250px;
     height: 250px;
@@ -20,10 +18,34 @@
     display: grid;
     row-gap: 10px;
 }
+#intro-description p{
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-style: italic;
+}
 .banner_container{
     margin: 0;
 }
+
 #intro-description h1{
     white-space: nowrap;
     overflow: hidden;
+}
+.tagline{
+    font-weight: bold;
+}
+.tagline_folow::before{
+    content: '';
+    display: inline-block;
+    width: 7%;  /* Length of the dash */
+    height: 2px;  /* Thickness of the dash */
+    background-color: black; /* Color of the dash */
+    margin-right: 5px; /* Space between dash and text */
+    vertical-align: middle;
+}
+@media screen and (max-width: 768px) {
+    .tagline_folow{
+        font-size: 1.15rem;
+    }
+    
 }
