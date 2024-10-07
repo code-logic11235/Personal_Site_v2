@@ -2,7 +2,7 @@
   "name": "personal_website_v2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://code-logic11235.github.io/Personal_Site_v2",
+  "homepage": "https://code-logic11235.github.io/Personal_Site_v2/build/index.html",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
