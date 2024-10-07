@@ -25,7 +25,7 @@ const Skills = () => {
           <SkillsCard skillsObj={frontEndSkills}/>
           <SkillsCard skillsObj={backEndSkills}/>
         </div>
-        <div className='skills_cv_btn'>
+        {/* <div className='skills_cv_btn'>
         `<a target="_blank" rel="noopener noreferrer" href={CV} className="button download_button"> View my CV
               <svg
                   className="button__icon"
@@ -45,7 +45,7 @@ const Skills = () => {
                   ></path>
               </svg>
             </a>
-        </div>
+        </div> */}
 
    </section>
   )
