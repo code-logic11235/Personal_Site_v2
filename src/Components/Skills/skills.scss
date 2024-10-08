@@ -1,7 +1,7 @@
 .skills{
     padding-top: 80px;
     .skills_container{
-        padding-top: 10vh;
+        padding: 10vh 0;
     }
 }
 
@@ -62,9 +62,12 @@
     justify-content: center;
 }
 
-@media screen and (min-width: 768px) and (max-width: 900px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .skills_text{
         margin-left: 5% !important;
+    }
+    .skills_card_container{
+        width: 50%;
     }
 
 }
@@ -80,7 +83,22 @@
         align-items: center;
     }
     .skills_card_container {
-        width: 70%;
+        width: 90%;
     }
+
+}
+.download_button{
+    color: white;
+    text-decoration: none;
+    padding: 1% 1.5rem;
+    display: inline-flex;
+    align-items: center;
+}
+.download_button_icon{
+    margin-left: 12px;
+    font-size: 28px;
+}
+.download_btn_wrapper{
+    display: flex;
 
 }

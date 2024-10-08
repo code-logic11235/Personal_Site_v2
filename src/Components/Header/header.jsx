@@ -1,4 +1,6 @@
 import React, { useState,useEffect } from "react";
+// import { Link } from 'react-router-dom';
+
 import "./header.css"
 
 function Header() {
@@ -12,9 +14,7 @@ function Header() {
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        // console.log('section: ',section)
-        // console.log('sectionTop: ',sectionTop)
-        // console.log('sectionHeight: ',sectionHeight)
+
 
         if (window.scrollY >= sectionTop - sectionHeight / 5) {
           setActiveSection(section.getAttribute("id"));
@@ -29,46 +29,48 @@ function Header() {
     };
   }, []);
 
-
+  function handleClick(e){
+    showMenu(!toggle);
+    // window.location.href = '/#home';
+    console.log(e.target.href)
+  }
 
   return (
     <header className="header">
       <nav className="nav container">
 
-        <a href="#home" className="nav_logo">
-         
-          </a>
+        <a href="#home" className="nav_logo"></a>
 
         <div className={toggle ? "nav_menu show_menu": "nav_menu"}>
           <ul className="nav_list grid">
 
             <li className="nav_item">
-              <a href="#home" className={`nav_link ${activeSection === 'home' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
+              <a href="/#home" className={`nav_link ${activeSection === 'home' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-house-user nav_icon"></i> Home
               </a>
             </li>
 
             <li className="nav_item">
-              <a href="#about" className={`nav_link ${activeSection === 'about' ? 'active-link' : ''}`} onClick={()=> showMenu(!toggle)}>
+              <a href="/#about" className={`nav_link ${activeSection === 'about' ? 'active-link' : ''}`}  onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-user nav_icon"></i> About
               </a>
             </li>
 
             <li className="nav_item">
-              <a href="#skills" className={`nav_link ${activeSection === 'skills' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
+              <a href="/#skills" className={`nav_link ${activeSection === 'skills' ? 'active-link' : ''}` } onClick={(e)=> handleClick(e)}>
                 <i className="uil uil-file-alt nav_icon"></i>Skills
               </a>
             </li>
 
             <li className="nav_item">
-              <a href="#projects" className="nav_link" onClick={()=> showMenu(!toggle)}>
+              <a href="/#projects" className="nav_link" id="projects" onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-constructor nav_icon"></i>Projects
               </a>
             </li>
 
             <li className="nav_item">
-              <a href="#contact" className="nav_link" onClick={()=> showMenu(!toggle)}>
-                <i className="uil uil-message nav_icon"></i>Contact
+              <a href="/resume" className="nav_link"  onClick={(e)=> handleClick(e)}>
+                <i className="uil uil-message nav_icon"></i> Résumé
               </a>
             </li>
           </ul>
