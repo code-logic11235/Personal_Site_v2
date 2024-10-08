@@ -10,7 +10,7 @@ function App() {
   
   console.log(window.location.hostname === "localhost" ? "fasf" : "/Personal_Site_v2")
   return (
-    <Router basename = {window.location.hostname === "localhost" ? "" : "/Personal_Site_v2"}>
+    <Router basename = "/Personal_Site_v2">
       <Routes>
         <Route path="/" element={
          <Layout>
