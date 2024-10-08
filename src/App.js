@@ -8,7 +8,7 @@ import Home_v2 from './Components/Home/home_v2';
 import Resume from './Components/Resume/resume';
 function App() {
   
-
+  console.log(window.location.hostname === "localhost" ? "fasf" : "/Personal_Site_v2")
   return (
     <Router basename = {window.location.hostname === "localhost" ? "" : "/Personal_Site_v2"}>
       <Routes>
