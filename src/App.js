@@ -20,7 +20,7 @@ function App() {
         } />
         <Route path="/resume" element={
           <Layout>
-            <Resume/>
+            {/* <Resume/> */}
           </Layout>
         }/> 
       </Routes>
