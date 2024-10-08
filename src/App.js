@@ -19,7 +19,6 @@ function App() {
          <Layout>
              <Home_v2/>    
              <About/>
-             <Skills/>
          </Layout>
         } />
         <Route path="/resume" element={
