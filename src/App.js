@@ -5,12 +5,12 @@ import Header from './Components/Header/header';
 import About from './Components/About/about';
 import Footer from './Components/Footer/footer';
 import Home_v2 from './Components/Home/home_v2';
-import Resume from './Components/Resume/resume';
+// import Resume from './Components/Resume/resume';
 function App() {
   
-  console.log(window.location.hostname === "localhost" ? "fasf" : "/Personal_Site_v2")
+
   return (
-    <Router basename = "/Personal_Site_v2">
+    <Router basename="/Personal_Site_v2">
       <Routes>
         <Route path="/" element={
          <Layout>
@@ -20,7 +20,7 @@ function App() {
         } />
         <Route path="/resume" element={
           <Layout>
-            <Resume/>
+            {/* <Resume/> */}
           </Layout>
         }/> 
       </Routes>
