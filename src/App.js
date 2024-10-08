@@ -9,7 +9,7 @@ import Resume from './Components/Resume/resume';
 function App() {
   
   return (
-    <Router basename = "/Personal_Site_v2">
+    <Router basename={window.location.hostname === "localhost" ? "" : "/Personal_Site_v2"}>
       <Routes>
         <Route path="/" element={
          <Layout>

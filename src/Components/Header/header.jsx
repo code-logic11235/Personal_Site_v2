@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from "react";
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import "./header.css"
 
@@ -35,19 +35,19 @@ function Header() {
     <header className="header">
       <nav className="nav container">
 
-        <a href="#home" className="nav_logo"></a>
+        <a href={window.location.hostname === "localhost" ? "/#home" : "/Personal_Site_v2/#home"} className="nav_logo"></a>
 
         <div className={toggle ? "nav_menu show_menu": "nav_menu"}>
           <ul className="nav_list grid">
 
             <li className="nav_item">
-              <a href="#home" className={`nav_link ${activeSection === 'home' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
+              <a href={window.location.hostname === "localhost" ? "/#home" : "/Personal_Site_v2/#home"} className={`nav_link ${activeSection === 'home' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-house-user nav_icon"></i> Home
               </a>
             </li>
 
             <li className="nav_item">
-              <a href="#about" className={`nav_link ${activeSection === 'about' ? 'active-link' : ''}`} onClick={()=> showMenu(!toggle)}>
+              <a href={window.location.hostname === "localhost" ? "/#about" : "/Personal_Site_v2/#about"} className={`nav_link ${activeSection === 'about' ? 'active-link' : ''}`} onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-user nav_icon"></i> About
               </a>
             </li>
@@ -65,9 +65,9 @@ function Header() {
             </li>
 
             <li className="nav_item">
-              <a href="/resume" className="nav_link" onClick={()=> showMenu(!toggle)}>
+              <Link href={window.location.hostname === "localhost" ? "/resume" : "/Personal_Site_v2/resume"} className="nav_link" onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-message nav_icon"></i> Résumé
-              </a>
+              </Link>
             </li>
           </ul>
 
