@@ -19,7 +19,7 @@ function Layout({ children }) {
 
 function App() {
     return (
-        <Router>
+        <Router basename="/Personal_Site_v2">
             <Routes>
                 <Route path="/" element={<Layout><Home_v2 /></Layout>} />
                 <Route path="/about" element={<Layout><About /></Layout>} />
