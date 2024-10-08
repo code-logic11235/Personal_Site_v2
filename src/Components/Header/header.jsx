@@ -29,11 +29,7 @@ function Header() {
     };
   }, []);
 
-  function handleClick(e){
-    showMenu(!toggle);
-    // window.location.href = '/#home';
-    console.log(e.target.href)
-  }
+
 
   return (
     <header className="header">
@@ -45,31 +41,31 @@ function Header() {
           <ul className="nav_list grid">
 
             <li className="nav_item">
-              <a href={window.location.hostname === "localhost" ? "/#home" : "/Personal_Site_v2/#home"} className={`nav_link ${activeSection === 'home' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
+              <a href="#home" className={`nav_link ${activeSection === 'home' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-house-user nav_icon"></i> Home
               </a>
             </li>
 
             <li className="nav_item">
-              <a href={window.location.hostname === "localhost" ? "/#about" : "/Personal_Site_v2/#about"} className={`nav_link ${activeSection === 'about' ? 'active-link' : ''}`}  onClick={()=> showMenu(!toggle)}>
+              <a href="#about" className={`nav_link ${activeSection === 'about' ? 'active-link' : ''}`} onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-user nav_icon"></i> About
               </a>
             </li>
 
-            {/* <li className="nav_item">
-              <a href="/#skills" className={`nav_link ${activeSection === 'skills' ? 'active-link' : ''}` } onClick={(e)=> handleClick(e)}>
+            <li className="nav_item">
+              <a href="#skills" className={`nav_link ${activeSection === 'skills' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-file-alt nav_icon"></i>Skills
               </a>
-            </li> */}
+            </li>
 
             <li className="nav_item">
-              <a href={window.location.hostname === "localhost" ? "/#projects" : "/Personal_Site_v2/#projects"} className="nav_link" id="projects" onClick={()=> showMenu(!toggle)}>
+              <a href="#projects" className="nav_link" onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-constructor nav_icon"></i>Projects
               </a>
             </li>
 
             <li className="nav_item">
-              <a href={window.location.hostname === "localhost" ? "/resume" : "/Personal_Site_v2/resume"} className="nav_link"  onClick={(e)=> handleClick(e)}>
+              <a href="/resume" className="nav_link" onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-message nav_icon"></i> Résumé
               </a>
             </li>
