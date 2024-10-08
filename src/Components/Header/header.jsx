@@ -1,4 +1,6 @@
 import React, { useState,useEffect } from "react";
+// import { Link } from 'react-router-dom';
+
 import "./header.css"
 
 function Header() {
@@ -12,9 +14,7 @@ function Header() {
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        // console.log('section: ',section)
-        // console.log('sectionTop: ',sectionTop)
-        // console.log('sectionHeight: ',sectionHeight)
+
 
         if (window.scrollY >= sectionTop - sectionHeight / 5) {
           setActiveSection(section.getAttribute("id"));
@@ -35,9 +35,7 @@ function Header() {
     <header className="header">
       <nav className="nav container">
 
-        <a href="#home" className="nav_logo">
-         
-          </a>
+        <a href="#home" className="nav_logo"></a>
 
         <div className={toggle ? "nav_menu show_menu": "nav_menu"}>
           <ul className="nav_list grid">
@@ -67,8 +65,8 @@ function Header() {
             </li>
 
             <li className="nav_item">
-              <a href="#contact" className="nav_link" onClick={()=> showMenu(!toggle)}>
-                <i className="uil uil-message nav_icon"></i>Contact
+              <a href="/resume" className="nav_link" onClick={()=> showMenu(!toggle)}>
+                <i className="uil uil-message nav_icon"></i> Résumé
               </a>
             </li>
           </ul>

@@ -45,7 +45,7 @@
     display: none;
 }
 .nav_link{
-    color: white !important;
+    color: white ;
     font-size: 18px !important;
     text-decoration: none;
     /* text-decoration: underline;
@@ -59,7 +59,7 @@
     flex-direction: column;
     align-items: center;
     font-size: var(--small-font-size);
-    color: var(--title-color);
+    /* color: var(--title-color); */
     font-weight: var(--font-medium);
     transition: .5s;
 }
@@ -75,21 +75,26 @@
 
 /* breakpoints */
 @media screen and (max-width: 768px) {
+    .nav_link{
+        color: rgb(255, 255, 255) ;
+    }
     .header{
         top: 0;
         bottom: initial;
         padding: 0 1rem;
+        opacity: 0.99;
     }
     .nav{
         height: var(--header-height);
         padding: 0 0 !important;
     }
     .nav_menu{
+        background-color: #665c60 !important;
         position: fixed;
         top: -100%;
         left: 0;
         width: 100%;
-        background-color: var(--body-color);
+        /* background-color: var(--body-color); */
         padding: 2rem 1.5rem 4rem;
         box-shadow: 0 1px 4px rgba(0, 0, 0, .15); /* Adjust shadow to appear below the menu */
         border-radius: 0 0 1.5rem 1.5rem; /* Rounded corners at the bottom */
@@ -104,6 +109,7 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap: 2rem;
+        padding: 0;
     }
     .nav_icon{
         font-size: 1.2rem;
@@ -125,7 +131,9 @@
         bottom: .5rem;
         font-size: 1.5rem;
         cursor: pointer;
-        color: var(--title-color);
+        /* color: var(--title-color); */
+        color: white; 
+
     }
     .nav_close:hover{
         color: var(--title-color-dark);
