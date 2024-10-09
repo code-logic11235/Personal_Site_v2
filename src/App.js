@@ -1,13 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+
 import "./App.css"
 import Header from './Components/Header/header';
 import About from './Components/About/about';
 import Footer from './Components/Footer/footer';
 import Home_v2 from './Components/Home/home_v2';
 import Resume from './Components/Resume/resume';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function App() {
+  const [isDM, SetIsDM] = useState(false);
   return (
     <Router basename={window.location.hostname === "localhost" ? "" : "/Personal_Site_v2"}>
       <Routes>

@@ -16,8 +16,8 @@
     color: var(--title-color);
     transition: transform 0.2s ease, color 0.1s ease; 
 }
-.home_social{
-    
+.github-icon, .instagram-icon{
+    color: var(--media-links-color) !important;
 }
 .home_social-icon:hover {
     transform: scale(1.5);
@@ -27,12 +27,13 @@
     display: grid;
     grid-template-columns: 1.5fr 1fr; 
     grid-template-rows: 85% 10%; 
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
     margin: 20vh 0 10vh 0;
     margin-bottom: 0;
     padding: 2vh 0 0 2vw;
     min-height: 200px;
     gap: 0;
+    color: var(--text-color) !important;
 }
 .home{
     display: flex;
@@ -64,7 +65,14 @@
     margin: 5vh 10vw 5vh 2vw;
     
 }
-
+.home_scroll-name{
+    margin-right: 12px;
+    color: var(--text-color) !important;
+}
+.home_scroll-button svg {
+    padding-left: 5px;
+    animation: bounce 2.5s infinite; 
+}
 
   @media screen and (min-width: 1200px) {
     .home_img {
@@ -203,7 +211,7 @@
         margin: var(--mb-3);
     }
     .home_scroll-name{
-        color: var(--title-color);
+        color: var(--text-color) !important;
         font-weight: var(--font-medium);
         margin-right: var(--mb-0-25);
         margin-left: 2px;

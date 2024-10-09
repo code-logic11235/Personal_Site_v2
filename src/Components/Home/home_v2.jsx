@@ -43,7 +43,7 @@ export default function Home() {
                     <div className="home_scroll">
                       <span className="home_scroll-name">Scroll Down</span>
                       <a href="#about" className="home_scroll-button button--flex">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style={{fill: "#0c0d0d", transform: 'msFilter'}}><path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style={{fill: "var(--text-color)", transform: 'msFilter'}}><path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path></svg>
                       </a>
                     </div>
             </div>

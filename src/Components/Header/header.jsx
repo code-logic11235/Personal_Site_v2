@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import { Link } from 'react-router-dom';
-
+import DarkModeButton from "./darkModeButton"
 import "./header.css"
 
 function Header() {
@@ -34,8 +34,9 @@ function Header() {
   return (
     <header className="header">
       <nav className="nav container">
-
+        
         <a href={window.location.hostname === "localhost" ? "/#home" : "/Personal_Site_v2/#home"} className="nav_logo"></a>
+
 
         <div className={toggle ? "nav_menu show_menu": "nav_menu"}>
           <ul className="nav_list grid">
@@ -65,12 +66,12 @@ function Header() {
             </li>
 
             <li className="nav_item">
-              <Link to= "/resume" className="nav_link" onClick={()=> showMenu(!toggle)}>
+              <Link to= "/resume" className={`nav_link ${activeSection === 'resume' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-message nav_icon"></i> Résumé
               </Link>
             </li>
           </ul>
-
+          <DarkModeButton/>
             <i className="uil uil-times nav_close" onClick={()=> showMenu(!toggle)}></i>
         </div>
 

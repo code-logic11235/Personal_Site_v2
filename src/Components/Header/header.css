@@ -11,7 +11,11 @@
 
 }
 
+.nav_menu{
+    display: flex;
+    align-items: center;
 
+}
 .nav {
     height: 80px;
     display: flex;
@@ -75,6 +79,7 @@
 
 /* breakpoints */
 @media screen and (max-width: 768px) {
+    
     .nav_link{
         color: rgb(255, 255, 255) ;
     }
@@ -99,6 +104,7 @@
         box-shadow: 0 1px 4px rgba(0, 0, 0, .15); /* Adjust shadow to appear below the menu */
         border-radius: 0 0 1.5rem 1.5rem; /* Rounded corners at the bottom */
         transition: .25s;
+        display: block;
     }
 
     /* show menu */

@@ -1,0 +1,43 @@
+
+
+.moon, .sun{
+    margin-left: 1.5rem ;
+    height: 33px;
+    width: 45px;
+}
+.moon:hover, .sun:hover{
+    cursor: pointer;
+
+}
+
+@media screen and (max-width: 768px) {
+    .moon {
+        position: absolute;
+        left:- 5px;
+        bottom: .7rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: white;
+        border-radius: 30px;
+        padding: 5px;
+
+        height: 40px;
+        width: 40px;
+        margin-left: 0 ;
+
+    }
+    .sun {
+        margin-left: 0 ;
+        position: absolute;
+        left:- 5px;
+        bottom: .7rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: white;
+        padding: 5px;
+        height: 40px;
+        width: 40px;
+
+    }
+
+}
