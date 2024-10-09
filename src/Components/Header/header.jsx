@@ -65,7 +65,7 @@ function Header() {
             </li>
 
             <li className="nav_item">
-              <Link to={window.location.hostname === "localhost" ? "/resume" : "/Personal_Site_v2/resume"} className="nav_link" onClick={()=> showMenu(!toggle)}>
+              <Link to= "/resume" className="nav_link" onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-message nav_icon"></i> Résumé
               </Link>
             </li>
