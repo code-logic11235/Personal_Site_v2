@@ -23,6 +23,9 @@ body{
   --background-gradient: linear-gradient(90deg, rgba(158, 158, 158, 0.03) 1px, transparent 1px), linear-gradient(180deg, rgba(184, 184, 184, 0.03) 1px, transparent 1px);
   --tag-line-dash-color: rgb(223, 192, 35);
   --media-links-color: white;
+  --button-color: rgb(237, 237, 237);
+  --button-text-color: black;
+  --button-hover-color: white;
 }
 
 [data-theme="light"] {
@@ -31,6 +34,10 @@ body{
   --background-gradient: linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px), linear-gradient(180deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   --tag-line-dash-color: black;
   --media-links-color: black;
+  --button-color: #393939;
+  --button-text-color: white;
+  --button-hover-color: black;
+  
 
 }
 
@@ -147,7 +154,7 @@ img {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
   /* height: 100vh; */
-  min-height: 100vh;
+  min-height: 95vh;
   /* padding: 6rem 0 2rem; */
 }
 
@@ -182,15 +189,15 @@ img {
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
-  background-color: var(--title-color);
-  color: var(--container-color);
-  padding: 1.25rem 2rem;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  padding: .8rem 1.3rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
 }
 
 .button:hover {
-  background-color: var(--title-color-dark);
+  background-color: var(--button-hover-color);
 }
 
 .button__icon {

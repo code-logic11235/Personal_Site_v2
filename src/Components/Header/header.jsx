@@ -30,6 +30,30 @@ function Header() {
   }, []);
 
 
+  //FOR MODAL 
+
+  // Get the modal
+// var modal = document.querySelector('.modal');
+
+// Get the <span> element that closes the modal
+// var closeButton = document.querySelector('.close');
+
+// Open modal (you can trigger this on button click or page load)
+// modal.style.display = "block";
+
+// When the user clicks on <span> (x), close the modal
+// closeButton.onclick = function() {
+  // modal.style.display = "none";
+// };
+
+// Close modal when user clicks outside the modal
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// };
+
+
 
   return (
     <header className="header">
@@ -54,9 +78,11 @@ function Header() {
             </li>
 
             <li className="nav_item">
-              <a href="#skills" className={`nav_link ${activeSection === 'skills' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
-                <i className="uil uil-file-alt nav_icon"></i>Skills
-              </a>
+
+              <Link to= "/resume" className={`nav_link ${activeSection === 'resume' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
+                <i className="uil uil-message nav_icon"></i> Résumé
+              </Link>
+              
             </li>
 
             <li className="nav_item">
@@ -66,9 +92,9 @@ function Header() {
             </li>
 
             <li className="nav_item">
-              <Link to= "/resume" className={`nav_link ${activeSection === 'resume' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
-                <i className="uil uil-message nav_icon"></i> Résumé
-              </Link>
+              <a href="/contact" className={`nav_link ${activeSection === 'contact' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
+                <i className="uil uil-file-alt nav_icon"></i>Contact
+              </a>
             </li>
           </ul>
           <DarkModeButton/>
