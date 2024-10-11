@@ -1,6 +1,7 @@
 .modal.show {
-    display: block;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;  }
   
   /* Initially hide modal */
   .modal {
@@ -19,7 +20,7 @@
     display: flex;
     flex-direction: row !important;
     background-color: rgb(210, 210, 210);
-    margin: 15% auto;
+    /* margin: 15% auto; */
     padding: 20px;
     border-radius: 5px;
     width: 80%;
@@ -32,6 +33,9 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    position: absolute;
+    right: 0;
+    padding: 0 20px 20px 20px;
   }
   
   .close:hover,s
@@ -44,6 +48,7 @@
   form {
     display: flex;
     flex-direction: column;
+    gap: 40px;
   }
   
   input[type="text"], input[type="email"], textarea {
@@ -96,38 +101,43 @@
     height: 100%;
     padding-right: .5rem;
 
+
   }
-  .contact_us_right_messages{
-    background: url(../../assets/modal_img.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 75%;
-    height: 50%;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    position: sticky;
-    /* height: 100%; */
-  }
-  .contact_us_right_messages::before {
-    content: "";
+  /* .contact_us_left h2{
     position: absolute;
-    top: 50%;
-    left: 50%;
+  } */
+  .contact_us_right_messages{
+
+    width: 100%;
+    /* height: 50%; */
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    /* display: flex; */
+    flex-direction: column;
+    /* gap: 3rem; */
+    /* position: sticky; */
+    height: 100%;
+  }
+
+.contact_us_right_messages svg{
     width: 100%;
     height: 100%;
-    border: 2px solid black; /* Black circular border */
-    border-radius: 90% 30% 70% 40% / 60% 40% 30% 70%;
-        transform: translate(-50%, -50%);
-    z-index: -1; /* Ensure it stays behind the image */
 }
 
 
   .contact_section{
+    display: grid;
+    grid-template-rows: 30px 30px 1fr;
+  }
+  .form-container{
+    width: 100%;
+    height: 100%;
     display: flex;
+    align-items: center;
     flex-direction: column;
+
+  }
+  .form-container form{
+    width: 100%;
   }
   .contact_modal_img_right{
     height: 200px;
@@ -135,4 +145,13 @@
   .contact_modal_img_left{
     height: 200px;
     position: relative;
+  }
+
+  @media screen and (max-width: 768px) {
+    .contact_us_right{
+        display: none;
+    }
+    .contact_us_left{
+        width: 100%;
+    }
   }
