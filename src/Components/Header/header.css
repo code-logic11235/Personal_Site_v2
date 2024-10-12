@@ -1,3 +1,17 @@
+#mouse-glow {
+    position: absolute;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    pointer-events: none;
+    /* Color of the glow */
+    background: var(--background-glow); 
+    /* Glow effect */
+    box-shadow: 0 0 40px 50px var(--background-glow); 
+    /* transition: background 0.1s ease; */
+  }
+
 .header {
     width: 100%;
     position: fixed;
@@ -8,6 +22,7 @@
     background-color: rgb(232, 232, 232);
     opacity: 0.95;
     background-color: #6d6569;
+    z-index: 3;
 
 }
 

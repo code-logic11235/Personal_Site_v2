@@ -20,24 +20,25 @@ body{
 [data-theme="dark"] {
   --background-color: #393939 ;
   --text-color: #ffffff;
-  --background-gradient: linear-gradient(90deg, rgba(158, 158, 158, 0.03) 1px, transparent 1px), linear-gradient(180deg, rgba(184, 184, 184, 0.03) 1px, transparent 1px);
+  --background-gradient: linear-gradient(90deg, rgba(158, 158, 158, 0.05) 1px, transparent 1px), linear-gradient(180deg, rgba(184, 184, 184, 0.05) 1px, transparent 1px);
   --tag-line-dash-color: rgb(223, 192, 35);
   --media-links-color: white;
   --button-color: rgb(237, 237, 237);
   --button-text-color: black;
   --button-hover-color: white;
+  --background-glow: rgba(236, 236, 236, 0.02); 
 }
 
 [data-theme="light"] {
   --background-color: #ffffff;
   --text-color: #000000;
-  --background-gradient: linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px), linear-gradient(180deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  --background-gradient: linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px), linear-gradient(180deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
   --tag-line-dash-color: black;
   --media-links-color: black;
   --button-color: #333333;
   --button-text-color: white;
   --button-hover-color: black;
-  
+  /* --background-glow: rgba(236, 236, 236, 0.5);  */
 
 }
 

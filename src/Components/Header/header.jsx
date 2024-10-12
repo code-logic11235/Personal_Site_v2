@@ -30,9 +30,16 @@ function Header({isModalOpen, setIsModalOpen}) {
     };
   }, []);
 
+  document.addEventListener('mousemove', function(e) {
+    let glow = document.getElementById('mouse-glow');
+    let glowSize = 50; // Same as the width/height of the glow
+    glow.style.left = `${e.pageX - glowSize / 2}px`;
+    glow.style.top = `${e.pageY - glowSize / 2}px`;
+  });
 
   return (
     <>
+    <div id="mouse-glow"></div>
      {isModalOpen && (
           <Contact isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
         )}
