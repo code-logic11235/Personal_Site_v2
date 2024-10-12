@@ -5,6 +5,7 @@
   
   /* Initially hide modal */
   .modal {
+    color: var(--text-color);
     /* display: none; */
     position: fixed;
     z-index: 10000; /* Ensures it's above other elements */
@@ -15,27 +16,32 @@
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent background */
   }
+  .contact_me{
+    padding-bottom: 1rempx;
+  }
   
   .modal-content {
     display: flex;
     flex-direction: row !important;
-    background-color: rgb(210, 210, 210);
+    background-color: var(--background-color) !important;
     /* margin: 15% auto; */
     padding: 20px;
     border-radius: 5px;
     width: 80%;
     max-width: 80%;
     height: 70%;
+    overflow: hidden;
   }
   
   .close {
-    color: #aaa;
+    top: 5px;
+    color: var(--text-color);
     float: right;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bold;
     position: absolute;
     right: 0;
-    padding: 0 20px 20px 20px;
+    padding: 0px 20px 0px 20px;
   }
   
   .close:hover,s
@@ -48,7 +54,8 @@
   form {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 3vh;
+    width: 100%;
   }
   
   input[type="text"], input[type="email"], textarea {
@@ -70,7 +77,7 @@
     background-color: #45a049;
   } */
   .contact_submit_button{
-    width: 150px;
+    width: 35%;
     margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
@@ -79,34 +86,42 @@
   input[type="text"], input[type="email"], textarea {
     width: 100%;
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--text-color);
     padding: 10px;
     margin: 8px 0;
     outline: none;
     line-height: 1.5;
     padding: 5px 0;
+    background-color: var(--background-color);
+    color: white;
+
   }
+  input::placeholder, 
+textarea::placeholder {
+  color: var(--text-color); /* Changes the placeholder text color to gray */
+}
+
   
   input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     border-bottom: 2px solid #4CAF50; /* Highlighted color when focused */
   }
 
-  .contact_us_right{
+  .contact_me_right{
     width: 50%;
     height: 100%;
     padding-left: .5rem;
   }
-  .contact_us_left{
+  .contact_me_left{
     width: 50%;
     height: 100%;
     padding-right: .5rem;
 
 
   }
-  /* .contact_us_left h2{
+  /* .contact_me_left h2{
     position: absolute;
   } */
-  .contact_us_right_messages{
+  .contact_me_right_messages{
 
     width: 100%;
     /* height: 50%; */
@@ -118,12 +133,17 @@
     height: 100%;
   }
 
-.contact_us_right_messages svg{
+.contact_me_right_messages svg{
     width: 100%;
     height: 100%;
 }
 
-
+.form_container{
+  height: 85%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
   .contact_section{
     display: grid;
     grid-template-rows: 30px 30px 1fr;
@@ -133,7 +153,8 @@
     height: 100%;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+
 
   }
   .form-container form{
@@ -146,12 +167,93 @@
     height: 200px;
     position: relative;
   }
+  .form_header{
+    display: flex;
+  }
+  .location_section{
+    display: flex;
+    align-items: center;
+  }
+  .form_header svg{
+    margin-right: 12px;
+  }
+  .form_location_text{
+    white-space: nowrap;
+  }
 
+  .form_location_globe{
+    width: 30px;
+    height: 30px;
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+  .divider{
+    font-size: 28px;
+    padding: 0 1em ;
+  }
+  .contact_section{
+    display: flex;
+    align-items: center;
+
+  }
+  .form_location_evelope{
+    width: 30px;
+    height: 30px;
+  }
+  .form_container_svg{
+    display: none;
+    visibility: hidden;
+  }
+  form textarea{
+    max-height: 150px;
+
+  }
+  
   @media screen and (max-width: 768px) {
-    .contact_us_right{
+    .contact_me_right{
         display: none;
     }
-    .contact_us_left{
+    .divider{
+      display: none;
+      visibility: hidden;
+    }
+    .contact_me_left{
         width: 100%;
     }
+    .form-container{
+      flex-direction: column;
+      align-items: baseline;
+    }
+    .form_container_svg{
+      visibility:visible;
+      display: block;
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      left: 0;
+      bottom: -5%;
+    }
+    .modal-content{
+      height: 80%;
+    }
+    .contact_submit_button{
+      width: 60%;
+    }
+    .form_container{
+      height: 65%;
+    }
+    .form_container_svg svg{
+      /* height: 100%; */
+      /* object-fit: cover; */
+      /* clip-path: inset(0 50% 80% 0); */
+    }
+    
+  }
+
+  .contact_me_left{
+    
   }

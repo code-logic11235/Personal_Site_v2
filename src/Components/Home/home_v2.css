@@ -2,8 +2,8 @@
     margin-top: 80px;
 }
 .hello_button svg{
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
 }
 .home_social{
     /* padding-left: 10%; */
@@ -102,7 +102,7 @@
       .home_content{
         padding: 2vh 0 1vw 2vw;
         height: 40%;
-        min-height: 225px;
+        min-height: 400px;
         max-width: 85vw;
       }
   }
@@ -132,11 +132,14 @@
     }
   }
   @media screen and (max-width: 768px) {
+    .home{
+        margin-top: 3rem;
+    }
     .home_container{
         height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
 
     }
 
@@ -240,7 +243,7 @@
 
     }
     .hello_button{
-        width: 200px;
-        background-color: #0c0d0d;
+        width: 170px;
+        background-color: var(--button-color);
     }
   }

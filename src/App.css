@@ -34,7 +34,7 @@ body{
   --background-gradient: linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px), linear-gradient(180deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   --tag-line-dash-color: black;
   --media-links-color: black;
-  --button-color: #393939;
+  --button-color: #333333;
   --button-text-color: white;
   --button-hover-color: black;
   
@@ -191,7 +191,7 @@ img {
   display: inline-block;
   background-color: var(--button-color);
   color: var(--button-text-color);
-  padding: .8rem 1.3rem;
+  padding: 1.1rem 1.5rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
 }
@@ -219,6 +219,7 @@ img {
 
   .button {
     padding: 1rem 1.75rem;
+    white-space: nowrap;
   }
 
   .button__icon {

@@ -1,8 +1,12 @@
 
-
-.moon, .sun{
+ .sun{
     margin-left: 1.5rem ;
     height: 33px;
+    width: 45px;
+}
+.moon{
+    margin-left: 1.5rem ;
+    height: 40px;
     width: 45px;
 }
 .moon:hover, .sun:hover{
@@ -19,7 +23,7 @@
         cursor: pointer;
         color: white;
         border-radius: 30px;
-        padding: 5px;
+        padding: 0;
 
         height: 40px;
         width: 40px;
