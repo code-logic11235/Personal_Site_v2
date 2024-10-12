@@ -150,6 +150,10 @@
     }
     .nav_close, .nav_toggle, .nav_icon{
         display: block;
+        color: white;
+    }
+    .nav_toggle_bars{
+        font-size: 30px;
     }
 }
 
