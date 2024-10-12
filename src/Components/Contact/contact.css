@@ -14,7 +14,7 @@
     width: 100%;  /* Full screen width */
     height: 100%; /* Full screen height */
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent background */
   }
   .contact_me{
     padding-bottom: 1rempx;
@@ -257,14 +257,5 @@ textarea::placeholder {
     .form_container{
       height: 65%;
     }
-    .form_container_svg svg{
-      /* height: 100%; */
-      /* object-fit: cover; */
-      /* clip-path: inset(0 50% 80% 0); */
-    }
-    
-  }
-
-  .contact_me_left{
     
   }

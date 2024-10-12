@@ -1,4 +1,6 @@
 .home{
+    display: flex;
+    align-items: center;
     padding-top: 80px;
 }
 .hello_button svg{
@@ -32,17 +34,14 @@
     grid-template-columns: 1.5fr 1fr; 
     grid-template-rows: 85% 10%; 
     border: 1px solid var(--text-color);
-    margin: 20vh 0 10vh 0;
-    margin-bottom: 0;
+    margin: 5vh 0 5vh 0;
+    /* margin-bottom: 0; */
     padding: 2vh 0 0 2vw;
     min-height: 200px;
     gap: 0;
     color: var(--text-color) !important;
 }
-.home{
-    display: flex;
-    /* align-items: center; */
-}
+
 .home_data{
     max-width: 800px;
     max-height: 450px;
@@ -66,7 +65,7 @@
 
   }
 .home_scroll{
-    margin: 5vh 10vw 5vh 2vw;
+    margin: 2vh 10vw 5vh 2vw;
     
 }
 .home_scroll-name{
@@ -89,7 +88,7 @@
         height: 40%;
         min-height: 275px;
         max-width: 80vw;
-        margin-top: 10rem;
+        /* margin-top: 10rem; */
 
       }
   }
@@ -133,7 +132,8 @@
   }
   @media screen and (max-width: 768px) {
     .home{
-        margin-top: 3rem;
+        padding-top: 3rem;
+        /* padding-top: 0; */
     }
     .home_container{
         /* height: 100vh; */
@@ -147,7 +147,7 @@
         border: none;
         align-items: center;
         grid-template-columns: 10px 1fr;
-        grid-template-rows: .3fr .4fr .2fr;
+        grid-template-rows: .3fr .4fr .1fr;
         column-gap: .5rem;
 
         padding-top: 0rem;

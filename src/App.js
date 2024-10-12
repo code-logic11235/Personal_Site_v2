@@ -13,25 +13,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
-  // const [isDM, SetIsDM] = useState(false);
+
   const [isModalOpen, SetIsModalOpen] = useState(false)
   return (
     <Router basename={window.location.hostname === "localhost" ? "" : "/Personal_Site_v2"}>
       <Routes>
         <Route path="/" element={
-         <Layout >
+         <Layout isModalOpen={isModalOpen} setIsModalOpen={SetIsModalOpen}>
              <Home_v2 isModalOpen={isModalOpen} setIsModalOpen={SetIsModalOpen}/>    
              <About/>
          </Layout>
         } />
         <Route path="/resume" element={
-          <Layout>
+          <Layout isModalOpen={isModalOpen} setIsModalOpen={SetIsModalOpen}>
             <Resume/>
-          </Layout>
-        }/> 
-        <Route path="/contact" element={
-          <Layout>
-            <Contact/>
           </Layout>
         }/> 
       </Routes>
@@ -41,7 +36,7 @@ function App() {
 
 export default App;
 
-function Layout({ children }) {
+function Layout({ children, isModalOpen, setIsModalOpen}) {
   const location = useLocation();
   // scroll to section whne click on from another page
   useEffect(() => {
@@ -55,7 +50,7 @@ function Layout({ children }) {
 
   return (
     <>
-      <Header/>
+      <Header isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
       {children}
       <Footer />
     </>

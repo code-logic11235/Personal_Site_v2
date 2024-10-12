@@ -1,9 +1,10 @@
 import React, { useState,useEffect } from "react";
 import { Link } from 'react-router-dom';
 import DarkModeButton from "./darkModeButton"
+import Contact from "../Contact/contact";
 import "./header.css"
 
-function Header() {
+function Header({isModalOpen, setIsModalOpen}) {
     const [toggle, showMenu] = useState(false);
 
     const [activeSection, setActiveSection] = useState("home");
@@ -30,33 +31,13 @@ function Header() {
   }, []);
 
 
-  //FOR MODAL 
-
-  // Get the modal
-// var modal = document.querySelector('.modal');
-
-// Get the <span> element that closes the modal
-// var closeButton = document.querySelector('.close');
-
-// Open modal (you can trigger this on button click or page load)
-// modal.style.display = "block";
-
-// When the user clicks on <span> (x), close the modal
-// closeButton.onclick = function() {
-  // modal.style.display = "none";
-// };
-
-// Close modal when user clicks outside the modal
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// };
-
-
-
   return (
+    <>
+     {isModalOpen && (
+          <Contact isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+        )}
     <header className="header">
+
       <nav className="nav container">
         
         <a href={window.location.hostname === "localhost" ? "/#home" : "/Personal_Site_v2/#home"} className="nav_logo"></a>
@@ -91,8 +72,8 @@ function Header() {
               </a>
             </li>
 
-            <li className="nav_item">
-              <a href="/contact" className={`nav_link ${activeSection === 'contact' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
+            <li onClick={()=>{setIsModalOpen(!isModalOpen)}} className="nav_item">
+              <a className={`nav_link ${activeSection === 'contact' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
                 <i className="uil uil-file-alt nav_icon"></i>Contact
               </a>
             </li>
@@ -107,6 +88,7 @@ function Header() {
 
       </nav>
     </header>
+    </>
 
     )
 }

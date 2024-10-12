@@ -17,7 +17,7 @@ export default function Contact({ isModalOpen, setIsModalOpen }) {
   return (
     <div onClick={()=>{closeModal()}} className={`modal ${isModalOpen ? "show" : ""}`} >
       <div onClick={(e) => e.stopPropagation()} className="modal-content">
-      <span span className="close" onClick={() => setIsModalOpen()}>
+      <span span className="close" onClick={() => closeModal()}>
             &times;
           </span>
         <div className="contact_me_left">

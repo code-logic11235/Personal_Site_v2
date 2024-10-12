@@ -8,9 +8,9 @@ export default function Home({ isModalOpen, setIsModalOpen }) {
   return (
     <section className="home section" id="home">
       <div className="home_container container ">
-        {isModalOpen && (
+        {/* {isModalOpen && (
           <Contact isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
-        )}
+        )} */}
 
         <div className="home_content grid">
           <div className="home_img"> </div>
