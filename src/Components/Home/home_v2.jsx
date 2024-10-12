@@ -5,7 +5,6 @@ import Banner from "./banner";
 import Contact from "../Contact/contact";
 
 export default function Home({ isModalOpen, setIsModalOpen }) {
-  console.log(isModalOpen);
   return (
     <section className="home section" id="home">
       <div className="home_container container ">
