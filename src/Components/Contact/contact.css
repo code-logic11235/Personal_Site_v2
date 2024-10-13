@@ -248,8 +248,13 @@ textarea::placeholder {
       left: 0;
       bottom: -5%;
     }
+    .modal.show {
+      /* margin-top: 3rem; */
+    }
     .modal-content{
-      height: 80%;
+      height: 90%;
+      max-width: 90%;
+      /* margin-top: 3vh; */
     }
     .contact_submit_button{
       width: 60%;
