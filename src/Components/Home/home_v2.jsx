@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import SocialLink from "./socialLinks";
 import "./home_v2.css";
 import Banner from "./banner";
-import Contact from "../Contact/contact";
 
 export default function Home({ isModalOpen, setIsModalOpen }) {
   return (
@@ -22,7 +21,7 @@ export default function Home({ isModalOpen, setIsModalOpen }) {
               onClick={() => setIsModalOpen(!isModalOpen)}
             >
               {" "}
-              say Hello
+              Say Hello
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="#000000"

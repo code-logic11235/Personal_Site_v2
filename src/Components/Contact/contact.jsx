@@ -1,13 +1,44 @@
-import { useEffect } from "react";
+import React, { useRef, useEffect, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import "./contact.css";
 export default function Contact({ isModalOpen, setIsModalOpen }) {
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [popupType, setPopUpType] = useState('success');
 
 
+  const handlePopUp = (value) => {
+    setPopUpType(value);
+    setShowSuccess(true);
+    setTimeout(() => setShowSuccess(false), 7000);
+  };
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, form.current, 
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+      )
+      .then(
+        () => {
+          handlePopUp('success') 
+          // set green success pop up here at top of page
+          e.target.reset();
+        },
+        (error) => {
+          // set red failed pop up here at top of page 
+          handlePopUp('failed')
+
+        },
+      );
+  };
 
   function closeModal() {
     setIsModalOpen(!isModalOpen)
     document.body.style.overflow = "auto";
   }
+
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = "hidden";  
@@ -16,6 +47,14 @@ export default function Contact({ isModalOpen, setIsModalOpen }) {
 
   return (
     <div onClick={()=>{closeModal()}} className={`modal ${isModalOpen ? "show" : ""}`} >
+        <div className={`success-popup ${showSuccess ? `show ${popupType}` : ''}`}>
+          {popupType === "success" ? 
+          <p>Message sent successfully! I will get back to you shortly</p>
+          :
+          <p>Failed to send message, Please try again later</p> 
+        }
+        </div>
+        {/* )} */}
       <div onClick={(e) => e.stopPropagation()} className="modal-content">
       <span span className="close" onClick={() => closeModal()}>
             &times;
@@ -71,7 +110,7 @@ export default function Contact({ isModalOpen, setIsModalOpen }) {
             </div>
           </div>
           <div className="form_container">
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
               {/* <label htmlFor="name">Name</label> */}
               <input
                 type="text"
@@ -103,6 +142,7 @@ export default function Contact({ isModalOpen, setIsModalOpen }) {
                 style={{ zIndex: "1" }}
                 className="button contact_submit_button button__flex"
                 type="submit"
+                value="Send"
               >
                 Submit
               </button>
