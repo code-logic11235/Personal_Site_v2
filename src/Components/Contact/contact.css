@@ -2,6 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: center;  
+  }@media screen and (max-width: 768px) {
+    .success-popup {
+      white-space: normal !important;
+      word-wrap: break-word;
+      width: 100% !important;
+      text-align: center;
+    }
+
   }
   .success-popup {
     position: fixed;
@@ -11,9 +19,11 @@
     color: rgb(0, 0, 0);
     padding: 10px 20px;
     border-radius: 5px;
+    /* width: 100vh; */
     transition: top 1.2s ease-in-out, background-color 1s ease;
     z-index: 10;
     white-space: nowrap;
+    max-width: 80%;
   }
   .success-popup p{
     margin: 6px;
@@ -26,7 +36,7 @@
     
   }
   .success-popup.failed{
-    background-color: #c10505;
+    background-color: #d50505;
 
   }
 
@@ -116,7 +126,7 @@
   z-index: 1;
 }
   input[type="text"], input[type="email"], textarea {
-    width: 100%;
+    width: 97%;
     border: none;
     border-bottom: 2px solid var(--text-color);
     padding: 10px;
@@ -146,7 +156,7 @@ textarea::placeholder {
   .contact_me_left{
     width: 50%;
     height: 100%;
-    padding-right: .5rem;
+   
     display: grid;
     grid-template-rows: .1fr .1fr 1fr;
     overflow: auto;
@@ -277,8 +287,8 @@ textarea::placeholder {
       left: 0;
       bottom: -5%;
     }
-    .modal.show {
-      /* margin-top: 3rem; */
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
     }
     .modal-content{
       height: 90%;

@@ -9,7 +9,7 @@ export default function Contact({ isModalOpen, setIsModalOpen }) {
   const handlePopUp = (value) => {
     setPopUpType(value);
     setShowSuccess(true);
-    setTimeout(() => setShowSuccess(false), 7000);
+    setTimeout(() => setShowSuccess(false), 6500);
   };
 
   const form = useRef();
