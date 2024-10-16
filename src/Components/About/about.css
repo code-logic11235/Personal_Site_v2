@@ -79,10 +79,15 @@
     }
     .about{
         padding-top: 0;
+        min-width: 270px;
+        margin: 0;
+        /* padding: 0 !important; */
+
     }
     .about_section_container{
         padding-top: 3rem ;
         padding-bottom: 3rem;
+        width: 100%;
     }
     .about_title{
         display: grid;
@@ -102,7 +107,7 @@
         justify-content: center; 
         gap: 20px; /* Add spacing between the .about_container and the button */  
         .about_container{
-            width: 90vw;
+            width: 100%;
             .about_img_description_1_wrapper{
                 display: grid;
                 flex-direction: row;
@@ -114,6 +119,12 @@
             }
             
         }
+    }
+
+}
+@media screen and (max-width: 300px){
+    .about_container{
+        /* width: 100vw !important; */
     }
 
 }

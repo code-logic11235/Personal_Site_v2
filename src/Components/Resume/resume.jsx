@@ -1,5 +1,5 @@
 import React from 'react'
-import "./resume.css"
+import "./resume.scss"
 
 
 const Resume = () => {
@@ -14,22 +14,67 @@ let obj = [
             'Implemented and iterated on many components throughout GM’s parts and accessories websites, including vehicle pickers, product pages, checkout forms, and more.',
             'Contributed to a rewrite of an internal application used to manage orders, catalogs, and inventory by dealers and distribution centers, speeding up their experiences through migration to React.',
             'Added code formatting as a pre-commit action and regularly pushed for higher utilization of unit testing across development pipelines and a team of 20-30 developers across projects.'
-        ],
-    'label': 'professional Experience'
-}, 
-{"logo" : "https://upload.wikimedia.org/wikipedia/commons/b/b0/General_Motors_%282021%29.svg",
-'description': `I started my undergraduate at Clemson University in fall 2016, not at all confident that I'd be an electrical engineer, but then I found Computer Science. After one introductory course on the track to add it as a minor, I made it my major and never looked back.
-
-I transferred to Coastal Carolina University, which was closer to home, at the start of my junior year and wrapped up my studies on time. I was one class away from a minor in Applied Mathematics, but life got complicated at the wrong time for me and I couldn't quite wrap it up. I had a good experience at Coastal, and would certainly recommend it to anyone looking to get a degree on the coast of South Carolina.`,
-'bulletPoint': [],
-    'label': 'education'
-}]
+        ],"company" : "General Motors",
+        'title': "Software Engineer",
+        'label': 'Professional Experience',
+        'duration': 'January 2022 - September 2024'
+    }, 
+    {
+        "logo" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Colorado_Buffaloes_wordmark.svg",
+        "company" : "University of Colorado Boulder",
+        'title': "Bachelor of Science in Computer Science",
+        'bulletPoint': [],
+        'label': 'Education'
+    }, {
+        "logo" : "https://avatars.githubusercontent.com/u/2824164?s=280&v=4",
+        "company" : "Hack Reactor by Galvanize",
+        'title': "Fullstack software engineering bootcamp",
+        'bulletPoint': []
+    }]
 
   return (
    <section className='resume section container' id="resume">
-      <h4 className='resume_title'> This is where i've honed my skills</h4>
-      <p className='resume_intro_paragraph'>I have four years of full-time experience, well versed in frontend technologies like UI component frameworks and features of the DOM, accustomed to JavaScript and TypeScript techniques, and familiar with deployment utilities ranging from Webpack to Docker. Above all (at least professionally) I value innovation and continuous learning.</p>
+    <div className='resume_intro_section'>
+      <h3 className='resume_title'> This is where i've honed my skills</h3>
+      <p className='resume_intro_paragraph'>I have a total five years of experience with three years of enterprise level experience, well versed in frontend technologies like UI component frameworks and features of the DOM, accustomed to JavaScript and TypeScript techniques, and familiar with deployment utilities ranging from Webpack to Docker. Above all (at least professionally) I value innovation and continuous learning.</p>
+    </div>
+    {/* <div className="professtional_experience_section">
+        <h4 className="experience_titttle"> Professional Experience</h4>
         
+    </div> */}
+    {obj.map((obj, key) =>{
+        return (
+        <div className={`experience_section ${key}`}>
+            <h3 className="experience_title"> {obj.label}</h3> 
+            <div className={`experience_wrapper ${key}`}>
+                <div className={`experience_title_wrapper ${key}`}>
+                    {obj.logo ? <img src = {obj.logo} className={`experience_logo ${key}`}></img>: ''}
+                    <div className='experience_title_right'>
+                        <div className={`experience_title ${key}`}>{obj.title}</div>
+                        <div className={`experience_company ${key}`}>{obj.company}</div>
+                        <div className={`experience_duration ${key}`}>{obj.duration}</div>
+                    </div>
+
+                </div>
+                <div className={`experience_description_wrapper ${key}`} >
+                    <p className="experience_description"> {obj.description}</p>
+                       { obj.bulletPoint.length > 0 ? <ul className={`experience_bulletpoints ${key}`}> 
+                            {obj.bulletPoint.map((bulletpoint, key)=>{
+                                return (
+                                    // < className={`experience_bulletpoints ${key}`}> 
+                                    <li>{bulletpoint}</li>
+                                    
+                                )
+                            })}
+                        </ul> : ''}
+                </div>
+            </div>
+
+        </div>
+
+        )
+    })}
+    
    </section>
   )
 }

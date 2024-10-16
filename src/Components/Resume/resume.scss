@@ -1,0 +1,44 @@
+#resume{
+
+    min-height: 100vh;
+    color: var(--text-color);
+    .experience_section{
+        display: flex;
+        flex-direction: column;
+        .experience_title_wrapper {
+            display: flex;
+            flex-direction: row;
+            background-color: silver;
+            padding: 1rem;
+            border-radius: 6px;
+
+        .experience_logo{
+            width: 75px;
+            height: 75px;
+        }
+        .experience_title_right{
+            padding-left: 1rem;
+            .experience_company{
+                font-style: italic;
+            }
+        }
+        }
+        .experience_bulletpoint{
+            li{
+                list-style-type: circle;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    #resume{
+        margin-top: 3rem;
+    }
+}
+@media screen and (min-width: 768px){
+    #resume{
+        padding-top: 80px;
+    }
+}
