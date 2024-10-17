@@ -88,11 +88,10 @@ function Header({ isModalOpen, setIsModalOpen }) {
               </li>
 
               <li className="nav_item">
+
                 <Link
                    to={
-                    window.location.hostname === "localhost"
-                      ? "/projects"
-                      : "/Personal_Site_v2/projects"
+                     "/projects"
                   }
                   className="nav_link"
                   onClick={() => showMenu(!toggle)}
