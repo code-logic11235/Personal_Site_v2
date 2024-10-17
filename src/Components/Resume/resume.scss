@@ -2,30 +2,49 @@
 
     min-height: 100vh;
     color: var(--text-color);
-    .experience_section{
-        display: flex;
-        flex-direction: column;
-        .experience_title_wrapper {
+    .resume_section_wrapper{
+        margin-top: 3rem;
+        padding-bottom: 6rem;
+        .resume_intro_paragraph{
+            font-family: var(--about-me-font);
+        }
+        .experience_section{
             display: flex;
-            flex-direction: row;
-            background-color: silver;
-            padding: 1rem;
-            border-radius: 6px;
+            flex-direction: column;
+            .experience_title_wrapper {
+                display: flex;
+                flex-direction: row;
+                background-color: var(--background-glow);
+                padding: 1rem;
+                border-radius: 6px;
 
-        .experience_logo{
-            width: 75px;
-            height: 75px;
-        }
-        .experience_title_right{
-            padding-left: 1rem;
-            .experience_company{
-                font-style: italic;
+                .experience_logo{
+                    width: 75px;
+                    height: 75px;
+                }
+                .experience_title_right{
+                    padding-left: 1rem;
+                    .experience_title{
+                        font-size: 1.3rem;
+                    }
+                    .experience_company{
+                        font-style: italic;
+                    }
+                }
             }
-        }
-        }
-        .experience_bulletpoint{
-            li{
-                list-style-type: circle;
+            .experience_description_wrapper{
+                .experience_description{
+                    font-family: var(--about-me-font);
+                }
+                .experience_bulletpoints{
+                    
+                    list-style-type: square;
+                    .bulletpoint_list{
+                        font-family: var(--about-me-font);
+                        list-style-type: square;
+        
+                    }
+                }
 
             }
         }

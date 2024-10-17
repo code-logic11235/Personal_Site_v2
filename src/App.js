@@ -25,11 +25,11 @@ function App() {
              <About/>
          </Layout>
         } />
-        <Route path="/resume" element={
+        {/* <Route path="/resume" element={
           <Layout isModalOpen={isModalOpen} setIsModalOpen={SetIsModalOpen}>
             <Resume/>
           </Layout>
-        }/> 
+        }/>  */}
         <Route path="/projects" element={
           <Layout>
             <Projects/>

@@ -1,7 +1,9 @@
 import React, { useState,useEffect } from "react";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import DarkModeButton from "./darkModeButton"
 import Contact from "../Contact/contact";
+import CV from "../../assets/Tai_pham_CV.pdf"
+
 import "./header.css"
 
 function Header({isModalOpen, setIsModalOpen}) {
@@ -30,16 +32,10 @@ function Header({isModalOpen, setIsModalOpen}) {
     };
   }, []);
 
-  document.addEventListener('mousemove', function(e) {
-    let glow = document.getElementById('mouse-glow');
-    let glowSize = 50; // Same as the width/height of the glow
-    glow.style.left = `${e.pageX - glowSize / 2}px`;
-    glow.style.top = `${e.pageY - glowSize / 2}px`;
-  });
-
+  
   return (
     <>
-    <div id="mouse-glow"></div>
+    {/* <div id="mouse-glow"></div> */}
      {isModalOpen && (
           <Contact isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
         )}
@@ -67,9 +63,9 @@ function Header({isModalOpen, setIsModalOpen}) {
 
             <li className="nav_item">
 
-              <Link to= "/resume" className={`nav_link ${activeSection === 'resume' ? 'active-link' : ''}` } onClick={()=> showMenu(!toggle)}>
+              <a className= "nav_link" rel="opener noreferrer" href={CV} >
                 <i className="uil uil-message nav_icon"></i> Résumé
-              </Link>
+              </a>
               
             </li>
 

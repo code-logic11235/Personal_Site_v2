@@ -26,7 +26,7 @@ body{
   --button-color: rgb(237, 237, 237);
   --button-text-color: black;
   --button-hover-color: white;
-  --background-glow: rgba(236, 236, 236, 0.02); 
+  --background-glow: rgb(172, 172, 172); 
 }
 
 [data-theme="light"] {
@@ -38,7 +38,7 @@ body{
   --button-color: #333333;
   --button-text-color: white;
   --button-hover-color: black;
-  /* --background-glow: rgba(236, 236, 236, 0.5);  */
+  --background-glow: rgba(119, 119, 119, 0.5); 
 
 }
 
@@ -193,7 +193,7 @@ img {
   display: inline-block;
   background-color: var(--button-color);
   color: var(--button-text-color);
-  padding: 1.1rem 1.5rem;
+  padding: 0 1.5rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
 }
@@ -220,7 +220,7 @@ img {
   }
 
   .button {
-    padding: 1rem 1.75rem;
+    /* padding: 1rem 1.75rem; */
     white-space: nowrap;
   }
 
