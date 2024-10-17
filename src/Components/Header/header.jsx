@@ -90,8 +90,8 @@ function Header({ isModalOpen, setIsModalOpen }) {
                 <a
                    href={
                     window.location.hostname === "localhost"
-                      ? "/#projects"
-                      : "/Personal_Site_v2/#projects"
+                      ? "/projects"
+                      : "/Personal_Site_v2/projects"
                   }
                   className="nav_link"
                   onClick={() => showMenu(!toggle)}
