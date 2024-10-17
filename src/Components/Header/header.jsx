@@ -3,6 +3,7 @@ import DarkModeButton from "./darkModeButton";
 import Contact from "../Contact/contact";
 import CV from "../../assets/Tai_pham_CV.pdf";
 import "./header.css";
+import { Link } from "react-router-dom";
 
 function Header({ isModalOpen, setIsModalOpen }) {
   const [toggle, showMenu] = useState(false);
@@ -87,8 +88,8 @@ function Header({ isModalOpen, setIsModalOpen }) {
               </li>
 
               <li className="nav_item">
-                <a
-                   href={
+                <Link
+                   to={
                     window.location.hostname === "localhost"
                       ? "/projects"
                       : "/Personal_Site_v2/projects"
@@ -97,7 +98,7 @@ function Header({ isModalOpen, setIsModalOpen }) {
                   onClick={() => showMenu(!toggle)}
                 >
                   <i className="uil uil-constructor nav_icon"></i> Projects
-                </a>
+                </Link>
               </li>
 
               <li
