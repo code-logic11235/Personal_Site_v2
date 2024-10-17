@@ -27,6 +27,7 @@ body{
   --button-text-color: black;
   --button-hover-color: white;
   --background-glow: rgb(172, 172, 172); 
+  --construction-background-animation:  rgba(255, 255, 255, 0);
 }
 
 [data-theme="light"] {
@@ -39,6 +40,7 @@ body{
   --button-text-color: white;
   --button-hover-color: black;
   --background-glow: rgba(119, 119, 119, 0.5); 
+  --construction-background-animation:  rgba(0, 0, 0, 0);
 
 }
 

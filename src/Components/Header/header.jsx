@@ -116,7 +116,7 @@ function Header({ isModalOpen, setIsModalOpen }) {
                 </a>
               </li>
             </ul>
-            <DarkModeButton />
+            <DarkModeButton/>
             <i
               className="uil uil-times nav_close"
               onClick={() => showMenu(!toggle)}

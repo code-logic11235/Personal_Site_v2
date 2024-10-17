@@ -6,32 +6,32 @@ import Header from './Components/Header/header';
 import About from './Components/About/about';
 import Footer from './Components/Footer/footer';
 import Home_v2 from './Components/Home/home_v2';
-import Resume from './Components/Resume/resume';
-// import Contact from "./Components/Contact/contact";
 import Projects from "./Components/Projects/projects";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
-
   const [isModalOpen, SetIsModalOpen] = useState(false)
+  
   return (
     <Router basename={window.location.hostname === "localhost" ? "" : "/Personal_Site_v2"}>
       <Routes>
         <Route path="/" element={
-         <Layout isModalOpen={isModalOpen} setIsModalOpen={SetIsModalOpen}>
+         <Layout 
+            isModalOpen={isModalOpen} 
+            setIsModalOpen={SetIsModalOpen} 
+          >
              <Home_v2 isModalOpen={isModalOpen} setIsModalOpen={SetIsModalOpen}/>    
              <About/>
          </Layout>
         } />
-        {/* <Route path="/resume" element={
-          <Layout isModalOpen={isModalOpen} setIsModalOpen={SetIsModalOpen}>
-            <Resume/>
-          </Layout>
-        }/>  */}
+
         <Route path="/projects" element={
-          <Layout isModalOpen={isModalOpen} setIsModalOpen={SetIsModalOpen}>
+          <Layout 
+            isModalOpen={isModalOpen} 
+            setIsModalOpen={SetIsModalOpen} 
+          >
             <Projects/>
           </Layout>
         }/> 
