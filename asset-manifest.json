@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Personal_Site_v2/static/css/main.c5c923a0.css",
-    "main.js": "/Personal_Site_v2/static/js/main.94cdfa86.js",
+    "main.css": "/Personal_Site_v2/static/css/main.79c8cba0.css",
+    "main.js": "/Personal_Site_v2/static/js/main.ad433153.js",
     "static/js/453.ac512506.chunk.js": "/Personal_Site_v2/static/js/453.ac512506.chunk.js",
     "static/media/headshot_black_2.png": "/Personal_Site_v2/static/media/headshot_black_2.2aa92d085e31aa5cbc3f.png",
-    "static/media/Tai_pham_CV.pdf": "/Personal_Site_v2/static/media/Tai_pham_CV.ab2032c5cfb56b46623a.pdf",
+    "static/media/Tai_pham_CV.pdf": "/Personal_Site_v2/static/media/Tai_pham_CV.3756436539123d3e1725.pdf",
     "static/media/T_P.png": "/Personal_Site_v2/static/media/T_P.dfc25d0cdfad500bf0ee.png",
     "index.html": "/Personal_Site_v2/index.html",
-    "main.c5c923a0.css.map": "/Personal_Site_v2/static/css/main.c5c923a0.css.map",
-    "main.94cdfa86.js.map": "/Personal_Site_v2/static/js/main.94cdfa86.js.map",
+    "main.79c8cba0.css.map": "/Personal_Site_v2/static/css/main.79c8cba0.css.map",
+    "main.ad433153.js.map": "/Personal_Site_v2/static/js/main.ad433153.js.map",
     "453.ac512506.chunk.js.map": "/Personal_Site_v2/static/js/453.ac512506.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5c923a0.css",
-    "static/js/main.94cdfa86.js"
+    "static/css/main.79c8cba0.css",
+    "static/js/main.ad433153.js"
   ]
 }
