@@ -64,6 +64,7 @@
     display: inline-flex;
     flex-direction: row;
     align-items: center;
+    font-size: 20px;
     .download_button_icon{
         padding-left: 1rem ;
         font-size: 3rem;

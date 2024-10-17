@@ -4,14 +4,18 @@ import "./projects.css"
 
 const Projects = () => {
 
-
   return (
-   <section className='projects section container' id="projects">
-      <h4 className='projects_title'> PROJECTS BEING DEPLOYED SOON</h4>
-      {/* <p className='Projects_intro_paragraph'>I have four years of full-time experience, well versed in frontend technologies like UI component frameworks and features of the DOM, accustomed to JavaScript and TypeScript techniques, and familiar with deployment utilities ranging from Webpack to Docker. Above all (at least professionally) I value innovation and continuous learning.</p> */}
-        
-   </section>
-  )
-}
+    <div className="under-construction-container">
+      <div className="construction-content">
+        <div className='construction-content-wrapper'>
+        <h1>Under Construction</h1>
+        <h4 className="contruction_content_description"> Apps being Deployed  </h4>
 
-export default Projects
+        </div>
+      </div>
+    </div>
+  );
+}
+export default Projects;
+
+

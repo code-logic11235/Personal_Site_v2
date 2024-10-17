@@ -31,7 +31,7 @@ function App() {
           </Layout>
         }/>  */}
         <Route path="/projects" element={
-          <Layout>
+          <Layout isModalOpen={isModalOpen} setIsModalOpen={SetIsModalOpen}>
             <Projects/>
           </Layout>
         }/> 
