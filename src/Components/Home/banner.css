@@ -41,12 +41,32 @@
     width: 7%;  /* Length of the dash */
     height: 3px;  /* Thickness of the dash */
     background-color: var( --tag-line-dash-color); /* Color of the dash */
-    margin-right: 5px; /* Space between dash and text */
+    margin-right: 8px; /* Space between dash and text */
+    vertical-align: middle;
+}
+.tagline_folow.mobile::after{
+    padding-left: 6px;
+    content: '';
+    display: inline-block;
+    width: 7%;  /* Length of the dash */
+    height: 3px;  /* Thickness of the dash */
+    background-color: var( --tag-line-dash-color); /* Color of the dash */
+    margin-left: 8px; /* Space between dash and text */
     vertical-align: middle;
 }
 @media screen and (max-width: 768px) {
     .tagline_folow{
         font-size: 1.15rem;
+        text-align: center;
+
+    }
+    .tagline{
+        text-align: center;
+    }
+    #intro-description {
+        p {
+            text-align: center;
+        }
     }
     
 }

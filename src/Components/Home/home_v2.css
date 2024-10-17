@@ -76,7 +76,21 @@
     padding-left: 5px;
     animation: bounce 2.5s infinite; 
 }
-
+.download_button{
+    flex-basis: 30%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    padding: 0 1rem;
+    .download_button_icon{
+        padding-left: .5rem ;
+        font-size: 2.6rem;
+    }
+    
+}
   @media screen and (min-width: 1200px) {
     .home_img {
         width: 70%;
@@ -131,6 +145,10 @@
     }
   }
   @media screen and (max-width: 768px) {
+    .download_btn_wrapper{
+        display: flex;
+        justify-content: center;
+    }
     .home{
         padding-top: 3rem;
         /* padding-top: 0; */

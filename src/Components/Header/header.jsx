@@ -10,6 +10,26 @@ function Header({ isModalOpen, setIsModalOpen }) {
   const [activeSection, setActiveSection] = useState("home");
   const headerRef = useRef(null); // Ref to the header component
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+
+        if (window.scrollY >= sectionTop - sectionHeight / 5) {
+          setActiveSection(section.getAttribute("id"));
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     if (toggle) {
@@ -93,7 +113,9 @@ function Header({ isModalOpen, setIsModalOpen }) {
                    to={
                      "/projects"
                   }
-                  className="nav_link"
+                  className={`nav_link ${
+                    activeSection === "projects" ? "active-link" : ""
+                  }`}
                   onClick={() => showMenu(!toggle)}
                 >
                   <i className="uil uil-constructor nav_icon"></i> Projects

@@ -5,7 +5,7 @@ export default function SocialLink (props) {
 
   return (
     <div className="home_social">
-      <a
+      {/* <a
         href="https://www.instagram.com/"
         className="home_social-icon"
         target="_blank"
@@ -19,9 +19,9 @@ export default function SocialLink (props) {
           }
         </i>
 
-      </a>
+      </a> */}
       <a
-        href="https://linkedin.com/"
+        href="https://www.linkedin.com/in/tai-pham-383481192/"
         className="home_social-icon"
         target="_blank"
       >
@@ -35,7 +35,7 @@ export default function SocialLink (props) {
       </i>
       </a>
       <a
-        href="https://github.com/"
+        href="https://github.com/code-logic11235"
         className="home_social-icon"
         target="_blank"
       >

@@ -5,7 +5,7 @@ import "./projects.css"
 const Projects = () => {
 
   return (
-    <div className="under-construction-container">
+    <section className="under-construction-container section projects" id="projects">
       <div className="construction-content">
         <div className='construction-content-wrapper'>
         <h1>Under Construction</h1>
@@ -13,7 +13,7 @@ const Projects = () => {
 
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 export default Projects;

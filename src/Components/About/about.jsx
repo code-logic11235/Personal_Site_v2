@@ -27,7 +27,7 @@ Over the years, I've had amazing opportunities to refine my skills. What I've fo
                         </div>
                         {/* <span className="description_sentence_2">
 I've had some great opportunities to refine the skills that help me thrive in software development. What I've learned is that building applications is all about breaking complex problems into smaller, manageable pieces.. The challenges and tools might constantly change, but the process stays consistent.</span> */}
-                        <span className="description_sentence_3">Outside of tech, I’ve had some wild times running the Austin Marathon, hiking the mountains peaks of Colorado, and learning to wakeboard on Lake Travis. I’ve also embraced calmer moments, like fishing the streams of Texas and growing (trying to) the largest tomato in my garden. Between life’s fast-paced and quieter moments, I always strive to find balance. It’s in nature that I can truly let go of the bits and bytes, allowing myself to appreciate and capture the beauty around me.</span>
+                        <span className="description_sentence_3">Outside of tech, I’ve had some wild times running the Austin Marathon, hiking the mountain peaks of Colorado, and learning to wakeboard on Lake Travis. I’ve also embraced calmer moments, like fishing the streams of Texas and trying to grow the largest tomato in my garden. Between life’s fast-paced and quieter moments, I always strive to find balance. It’s in nature that I can truly let go of the bits and bytes, allowing myself to appreciate and capture the beauty around me.</span>
                     </div>
                     
                 </div>

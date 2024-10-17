@@ -47,7 +47,7 @@
     position: absolute;
     height: 3px; /* Height of the border */
     background-color:var(--construction-background-animation);
-    animation: clamp 5s ease-in-out forwards; /* Apply the animation */
+    animation: clamp 3s ease-in-out forwards; /* Apply the animation */
 }
 
 /* Top border */
@@ -113,14 +113,9 @@
     0% {
         height: 50%; /* Close to the center */
     }
-    25% {
-        height: 15%; /* Start fully open */
-    }
-    75% {
-        height: 50%; /* Start fully open */
-    }
+   
     100% {
-        height: 15%; /* Start fully open */
+        height: 22%; /* Start fully open */
     }
     
 }
