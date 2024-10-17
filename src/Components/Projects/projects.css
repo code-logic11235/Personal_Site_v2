@@ -40,7 +40,7 @@
     height: 3px; /* Height of the border */
     background-color: var(--construction-background-animation);
 
-    animation: clamp 5s ease-in-out forwards; /* Apply the animation */
+    animation: clamp 3s ease-in-out forwards; /* Apply the animation */
 }
 .construction-content::after {
     content: "";
