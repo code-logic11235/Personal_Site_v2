@@ -58,6 +58,8 @@
     .tagline_folow{
         font-size: 1.15rem;
         text-align: center;
+        white-space: nowrap;
+
 
     }
     .tagline{

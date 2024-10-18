@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     width: 95vw;
-    height: 100vh;
+    height: 100%;
     min-width: 270px;
     position: relative; /* Needed for positioning the corner lines */
 }
