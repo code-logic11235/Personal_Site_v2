@@ -27,7 +27,7 @@ function App() {
          </Layout>
         } />
 
-        <Route basename={window.location.hostname === "localhost" ? "/projects" : "/Personal_Site_v2/projects"} element={
+        <Route path="/projects" element={
           <Layout 
             isModalOpen={isModalOpen} 
             setIsModalOpen={SetIsModalOpen} 
