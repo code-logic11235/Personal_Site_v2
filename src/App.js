@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
-import "./App.css"
+import "./App.css";
 import Header from './Components/Header/header';
 import About from './Components/About/about';
 import Footer from './Components/Footer/footer';
@@ -12,19 +12,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
-  const [isModalOpen, SetIsModalOpen] = useState(false)
+  const [isModalOpen, SetIsModalOpen] = useState(false);
   
   return (
-    <Router basename={window.location.hostname === "localhost" ? "" : "/Personal_Site_v2"}>
+    <Router>
       <Routes>
         <Route path="/" element={
-         <Layout 
+          <Layout 
             isModalOpen={isModalOpen} 
             setIsModalOpen={SetIsModalOpen} 
           >
-             <Home_v2 isModalOpen={isModalOpen} setIsModalOpen={SetIsModalOpen}/>    
-             <About/>
-         </Layout>
+            <Home_v2 isModalOpen={isModalOpen} setIsModalOpen={SetIsModalOpen}/>    
+            <About/>
+          </Layout>
         } />
 
         <Route path="/projects" element={
@@ -42,9 +42,10 @@ function App() {
 
 export default App;
 
-function Layout({ children, isModalOpen, setIsModalOpen}) {
+function Layout({ children, isModalOpen, setIsModalOpen }) {
   const location = useLocation();
-  // scroll to section whne click on from another page
+
+  // Scroll to section when clicking on a link from another page
   useEffect(() => {
     if (location.hash) {
       const element = document.getElementById(location.hash.substring(1));
@@ -56,7 +57,7 @@ function Layout({ children, isModalOpen, setIsModalOpen}) {
 
   return (
     <>
-      <Header isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
+      <Header isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       {children}
       <Footer />
     </>
