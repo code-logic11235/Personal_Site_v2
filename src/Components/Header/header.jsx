@@ -52,104 +52,74 @@ function Header({ isModalOpen, setIsModalOpen }) {
       {isModalOpen && (
         <Contact isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       )}
-      <header className="header" ref={headerRef}>
-        <nav className="nav container">
-          <a
-            href={
-              window.location.hostname === "localhost"
-                ? "/#home"
-                : "/Personal_Site_v2/#home"
-            }
-            className="nav_logo"
-          ></a>
+       <header className="header" ref={headerRef}>
+      <nav className="nav container">
+        <Link to="/" className="nav_logo"></Link>
 
-          <div className={toggle ? "nav_menu show_menu" : "nav_menu"}>
-            <ul className="nav_list grid">
-              <li className="nav_item">
-                <a
-                  href={
-                    window.location.hostname === "localhost"
-                      ? "/#home"
-                      : "/Personal_Site_v2/#home"
-                  }
-                  className={`nav_link ${
-                    activeSection === "home" ? "active-link" : ""
-                  }`}
-                  onClick={() => showMenu(!toggle)}
-                >
-                  <i className="uil uil-house-user nav_icon"></i> Home
-                </a>
-              </li>
-
-              <li className="nav_item">
-                <a
-                  href={
-                    window.location.hostname === "localhost"
-                      ? "/#about"
-                      : "/Personal_Site_v2/#about"
-                  }
-                  className={`nav_link ${
-                    activeSection === "about" ? "active-link" : ""
-                  }`}
-                  onClick={() => showMenu(!toggle)}
-                >
-                  <i className="uil uil-user nav_icon"></i> About
-                </a>
-              </li>
-
-              <li className="nav_item">
-                <a
-                  className="nav_link"
-                  rel="opener noreferrer"
-                  href={CV}
-                >
-                  <i className="uil uil-message nav_icon"></i> Résumé
-                </a>
-              </li>
-
-              <li className="nav_item">
-
-                <Link
-                   to={
-                     "/projects"
-                  }
-                  className={`nav_link ${
-                    activeSection === "projects" ? "active-link" : ""
-                  }`}
-                  onClick={() => showMenu(!toggle)}
-                >
-                  <i className="uil uil-constructor nav_icon"></i> Projects
-                </Link>
-              </li>
-
-              <li
-                onClick={() => {
-                  setIsModalOpen(!isModalOpen);
-                }}
-                className="nav_item"
+        <div className={toggle ? "nav_menu show_menu" : "nav_menu"}>
+          <ul className="nav_list grid">
+            <li className="nav_item">
+              <Link
+                to="/#home"
+                className={`nav_link ${activeSection === "home" ? "active-link" : ""}`}
+                onClick={() => showMenu(!toggle)}
               >
-                <a
-                  className={`nav_link ${
-                    activeSection === "contact" ? "active-link" : ""
-                  }`}
-                  onClick={() => showMenu(!toggle)}
-                >
-                  <i className="uil uil-file-alt nav_icon"></i> Contact
-                </a>
-              </li>
-            </ul>
-            <DarkModeButton/>
-            <i
-              className="uil uil-times nav_close"
-              onClick={() => showMenu(!toggle)}
-            ></i>
-          </div>
+                <i className="uil uil-house-user nav_icon"></i> Home
+              </Link>
+            </li>
 
-          <div className="nav_toggle" onClick={() => showMenu(!toggle)}>
-            <i className="uil uil-bars nav_toggle_bars"></i>
-          </div>
-        </nav>
-      </header>
+            <li className="nav_item">
+              <Link
+                to="/#about" // Adjusted to link to About section
+                className={`nav_link ${activeSection === "about" ? "active-link" : ""}`}
+                onClick={() => showMenu(!toggle)}
+              >
+                <i className="uil uil-user nav_icon"></i> About
+              </Link>
+            </li>
+
+            <li className="nav_item">
+              <a className="nav_link" rel="noopener noreferrer" href={CV}>
+                <i className="uil uil-message nav_icon"></i> Résumé
+              </a>
+            </li>
+
+            <li className="nav_item">
+              <Link
+                to="/projects"
+                className={`nav_link ${activeSection === "projects" ? "active-link" : ""}`}
+                onClick={() => showMenu(!toggle)}
+              >
+                <i className="uil uil-constructor nav_icon"></i> Projects
+              </Link>
+            </li>
+
+            <li
+              onClick={() => {
+                setIsModalOpen(!isModalOpen);
+              }}
+              className="nav_item"
+            >
+              <a
+                className={`nav_link ${activeSection === "contact" ? "active-link" : ""}`}
+                onClick={() => showMenu(!toggle)}
+              >
+                <i className="uil uil-file-alt nav_icon"></i> Contact
+              </a>
+            </li>
+          </ul>
+          <DarkModeButton />
+          <i
+            className="uil uil-times nav_close"
+            onClick={() => showMenu(!toggle)}
+          ></i>
+        </div>
+
+        <div className="nav_toggle" onClick={() => showMenu(!toggle)}>
+          <i className="uil uil-bars nav_toggle_bars"></i>
+        </div>
+      </nav>
+    </header>
     </>
   );
 }

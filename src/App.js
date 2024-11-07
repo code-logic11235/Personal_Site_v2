@@ -15,27 +15,16 @@ function App() {
   const [isModalOpen, SetIsModalOpen] = useState(false);
   
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={
-          <Layout 
-            isModalOpen={isModalOpen} 
-            setIsModalOpen={SetIsModalOpen} 
-          >
-            <Home_v2 isModalOpen={isModalOpen} setIsModalOpen={SetIsModalOpen}/>    
-            <About/>
-          </Layout>
-        } />
-
-        <Route path="/projects" element={
-          <Layout 
-            isModalOpen={isModalOpen} 
-            setIsModalOpen={SetIsModalOpen} 
-          >
-            <Projects/>
-          </Layout>
-        }/> 
-      </Routes>
+   <Router>
+      <Layout 
+        isModalOpen={isModalOpen} 
+        setIsModalOpen={SetIsModalOpen}
+      >
+        <Routes>
+          <Route path="/" element={<Home_v2 isModalOpen={isModalOpen} setIsModalOpen={SetIsModalOpen} />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </Layout>
     </Router>
   );
 }
