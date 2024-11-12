@@ -12,6 +12,7 @@ const Banner = () => {
   const toRotate = [ "Web Developer. ", "Web Designer. ", "Dreamer. " ];
   const period = 3000;
   const [isMobile, setIsMobile] = useState(false);
+  const nonDeletingText = "Web Developer";
 
 
   useEffect(()=>{
@@ -57,7 +58,7 @@ const Banner = () => {
                 <div className="align-items-center justify-content-between">
                     <div  id='intro-description'>
                         <h2 className='tagline'> Welcome to my Website</h2>
-                        <h5 className={`tagline_folow ${isMobile ? 'mobile' : ''}`} >{`I'm Tai Pham, a`} <span className='wrap'> {text}</span></h5>
+                        <h5 className={`tagline_folow ${isMobile ? 'mobile' : ''}`} >{`I'm Tai Pham, a`} <span className='wrap'> {nonDeletingText}</span></h5>
                         <p> Feel free to explore — whether you’re interested in looking at some of my latest projects, or simply browsing around. Dive in, don’t hesitate to reach out! Enjoy your visit!</p>
                     </div>
                    
