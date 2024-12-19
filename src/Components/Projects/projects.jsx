@@ -14,8 +14,8 @@ const Projects = () => {
         </div>
       </div> */}
       <div className = "project paragraph-container">
-        <p>You can check out my previous work at General Motors by visiting one of the GM brands while i work to deploy some of my latest projects (updated 12/02/24):</p>
-        {/* <p>Where I’ve implemented and iterated on many components, including the homepage, vehicle picker, search page, products page, and more.</p> */}
+        <p>You can explore my previous work at General Motors through the GM brands while I deploy my latest projects:</p>
+
           <ul className = "gmLinks">
             <li><a href="https://accessories.gmc.com/" target="_blank" rel="noopener noreferrer">GMC Accessories</a></li>
             <li><a href="https://accessories.chevrolet.com/" target="_blank" rel="noopener noreferrer">Chevrolet Accessories</a></li>
